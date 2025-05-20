@@ -2,6 +2,7 @@ from pathlib import Path
 from typing import Optional
 
 from models.gcs_metadata import GCSMetadata
+from models.paper_metadata import PaperMetadata
 
 
 class Document:
@@ -12,6 +13,7 @@ class Document:
         grobid_response: Optional[str] = None,
         parsed_text: Optional[str] = None,
         gcs_metadata: Optional[GCSMetadata] = None,
+        paper_metadata: Optional[PaperMetadata] = None,
     ):
         self.file_path = file_path
 
@@ -22,6 +24,7 @@ class Document:
 
         # Field specific to GCS ingestor
         self.gcs_metadata = gcs_metadata
+        self.paper_metadata = paper_metadata
 
     def __repr__(self):
         return f"<Document {self.file_path.name}>"
