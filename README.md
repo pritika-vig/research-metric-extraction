@@ -72,4 +72,4 @@ Further work may include:
 
 ## Contact
 
-For questions or collaboration, please reach out to `pritika.vig@example.com` or open an issue in this repository.
+For questions or collaboration, please reach out to `pritikav@mit.edu` or open an issue in this repository.
