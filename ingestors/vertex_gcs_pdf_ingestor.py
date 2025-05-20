@@ -11,12 +11,12 @@ from ingestors.ingestor import Ingestor
 from models.document import Document
 from models.gcs_metadata import GCSMetadata
 
-# Load environment variables from .env
 load_dotenv()
 
 
 class VertexGcsPDFIngestor(Ingestor):
-    def __init__(self):
+    def __init__(self, directory_path: str):
+        self.directory_path = Path(directory_path)
         self.bucket_name = os.getenv("GCS_BUCKET")
         self.project_id = os.getenv("GCP_PROJECT_ID")
         self.region = os.getenv("GCP_REGION", "us-central1")
@@ -33,24 +33,25 @@ class VertexGcsPDFIngestor(Ingestor):
         blob = bucket.blob(destination_blob)
 
         if blob.exists():
-            print(f"✅ Skipping upload — blob already exists: {destination_blob}")
+            print(f"Skipping upload — blob already exists: {destination_blob}")
         else:
             blob.upload_from_filename(str(local_file))
-            print(f"⬆️ Uploaded file to: {destination_blob}")
+            print(f"Uploaded file to: {destination_blob}")
 
         return f"gs://{self.bucket_name}/{destination_blob}"
 
-    def ingest(self, directory_path: str) -> List[Document]:
+    def ingest(self) -> List[Document]:
         documents: List[Document] = []
-        pdf_dir = Path(directory_path)
 
-        for pdf_file in pdf_dir.glob("*.pdf"):
+        for pdf_file in self.directory_path.glob("*.pdf"):
             print(f"Processing: {pdf_file.name}")
             blob_name = f"uploads/{pdf_file.name}"
             gcs_uri = self.upload_to_gcs(pdf_file, blob_name)
 
             gcs_metadata = GCSMetadata(
-                gcs_uri=gcs_uri, blob_name=blob_name, bucket_name=self.bucket_name
+                gcs_uri=gcs_uri,
+                blob_name=blob_name,
+                bucket_name=self.bucket_name,
             )
 
             doc = Document(

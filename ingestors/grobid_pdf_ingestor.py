@@ -1,3 +1,5 @@
+# ingestors/grobid_pdf_ingestor.py
+
 import logging
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -14,19 +16,22 @@ logging.basicConfig(level=logging.INFO)
 
 class GrobidPDFIngestor(Ingestor):
     def __init__(
-        self, grobid_url: str = "http://localhost:8070", verbose: bool = False
+        self,
+        directory_path: str,
+        grobid_url: str = "http://localhost:8070",
+        verbose: bool = False,
     ):
+        self.directory_path = Path(directory_path)
         self.grobid_url = grobid_url.rstrip("/")
         self.verbose = verbose
 
-    def ingest(self, directory_path: str) -> List[Document]:
+    def ingest(self) -> List[Document]:
         extracted_documents = []
 
-        input_dir = Path(directory_path)
-        if not input_dir.is_dir():
-            raise ValueError(f"Invalid directory: {directory_path}")
+        if not self.directory_path.is_dir():
+            raise ValueError(f"Invalid directory: {self.directory_path}")
 
-        for pdf_file in input_dir.glob("*.pdf"):
+        for pdf_file in self.directory_path.glob("*.pdf"):
             try:
                 if self.verbose:
                     logger.info(f"Sending {pdf_file.name} to GROBID...")
@@ -54,7 +59,7 @@ class GrobidPDFIngestor(Ingestor):
                 extracted_documents.append(doc)
 
                 if self.verbose:
-                    logger.info(f"Sending {pdf_file.name} to GROBID...")
+                    logger.info(f"Successfully ingested: {pdf_file.name}")
 
             except Exception as e:
                 logger.info(f"Failed to process {pdf_file.name}: {e}")
@@ -69,7 +74,6 @@ class GrobidPDFIngestor(Ingestor):
         ns = {"tei": "http://www.tei-c.org/ns/1.0"}
         root = ET.fromstring(xml_text)
 
-        # Select all paragraphs within the main body of the article
         for p in root.findall(".//tei:text/tei:body//tei:p", namespaces=ns):
             paragraph_text = "".join(p.itertext()).strip()
             if paragraph_text:

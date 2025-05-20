@@ -11,9 +11,9 @@ from models.document import Document
 class TestGrobidPDFIngestor(unittest.TestCase):
     @patch("ingestors.grobid_pdf_ingestor.Path.is_dir", return_value=False)
     def test_invalid_directory_raises(self, mock_is_dir):
-        ingestor = GrobidPDFIngestor()
+        ingestor = GrobidPDFIngestor("/invalid/path")
         with self.assertRaises(ValueError):
-            ingestor.ingest("/invalid/path")
+            ingestor.ingest()
 
     @patch("ingestors.grobid_pdf_ingestor.Path.glob")
     @patch("builtins.open", new_callable=mock_open, read_data=b"%PDF-1.4")
@@ -72,8 +72,8 @@ class TestGrobidPDFIngestor(unittest.TestCase):
         mock_pdf_path.name = "test.pdf"
         mock_glob.return_value = [mock_pdf_path]
 
-        ingestor = GrobidPDFIngestor()
-        documents = ingestor.ingest("/some/valid/path")
+        ingestor = GrobidPDFIngestor("/some/valid/path")
+        documents = ingestor.ingest()
 
         self.assertEqual(len(documents), 1)
         self.assertIsInstance(documents[0], Document)
@@ -99,8 +99,8 @@ class TestGrobidPDFIngestor(unittest.TestCase):
         mock_pdf_path.name = "test_error.pdf"
         mock_glob.return_value = [mock_pdf_path]
 
-        ingestor = GrobidPDFIngestor()
-        documents = ingestor.ingest("/some/valid/path")
+        ingestor = GrobidPDFIngestor("/some/valid/path")
+        documents = ingestor.ingest()
 
         self.assertEqual(len(documents), 0)
 

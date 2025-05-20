@@ -1,4 +1,4 @@
-# tests/local_pdf_ingestor_test.py
+# tests/test_local_pdf_ingestor_test.py
 
 import os
 import tempfile
@@ -49,8 +49,8 @@ class TestLocalPDFIngestor(unittest.TestCase):
     def test_ingest_single_column_pdf(self):
         self._create_pdf("single_column.pdf", ["Line 1", "Line 2", "Line 3"])
 
-        ingestor = LocalPDFIngestor()
-        result = ingestor.ingest(self.test_dir.name)
+        ingestor = LocalPDFIngestor(self.test_dir.name)
+        result = ingestor.ingest()
 
         text = self._get_document_text(result, "single_column.pdf")
         self.assertIn("Line 1", text)
@@ -64,8 +64,8 @@ class TestLocalPDFIngestor(unittest.TestCase):
             right_texts=["Right 1", "Right 2"],
         )
 
-        ingestor = LocalPDFIngestor()
-        result = ingestor.ingest(self.test_dir.name)
+        ingestor = LocalPDFIngestor(self.test_dir.name)
+        result = ingestor.ingest()
 
         text = self._get_document_text(result, "two_column.pdf")
         self.assertIn("Left 1", text)
@@ -86,8 +86,8 @@ class TestLocalPDFIngestor(unittest.TestCase):
             right_texts=["Right Body"],
         )
 
-        ingestor = LocalPDFIngestor()
-        result = ingestor.ingest(self.test_dir.name)
+        ingestor = LocalPDFIngestor(self.test_dir.name)
+        result = ingestor.ingest()
 
         text = self._get_document_text(result, "mixed_column.pdf")
         self.assertIn("Intro Paragraph", text)

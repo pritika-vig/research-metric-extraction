@@ -8,10 +8,8 @@ from ingestors.vertex_gcs_pdf_ingestor import VertexGcsPDFIngestor
 
 
 def test_pdf_upload_and_cleanup(temp_test_dir, test_pdf_file):
-    ingestor = VertexGcsPDFIngestor()
-
-    # Ingest the file
-    documents = ingestor.ingest(str(temp_test_dir))
+    ingestor = VertexGcsPDFIngestor(str(temp_test_dir))
+    documents = ingestor.ingest()
     assert len(documents) == 1
 
     doc = documents[0]
@@ -24,7 +22,7 @@ def test_pdf_upload_and_cleanup(temp_test_dir, test_pdf_file):
 
 
 def test_skip_existing_blob(temp_test_dir):
-    ingestor = VertexGcsPDFIngestor()
+    ingestor = VertexGcsPDFIngestor(str(temp_test_dir))
 
     # Create a file manually
     test_pdf = temp_test_dir / f"skip_test_{uuid.uuid4().hex}.pdf"
@@ -50,7 +48,7 @@ def test_skip_existing_blob(temp_test_dir):
     ingestor.upload_to_gcs = wrapped_upload
 
     # Should skip upload
-    ingestor.ingest(str(temp_test_dir))
+    ingestor.ingest()
     assert upload_attempted["count"] == 0
 
     blob.delete()

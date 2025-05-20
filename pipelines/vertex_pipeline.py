@@ -161,10 +161,10 @@ class VertexPipeline(Pipeline):
         output_dir.mkdir(parents=True, exist_ok=True)
 
         config = self.build_config()
-        ingestor = VertexGcsPDFIngestor()
+        ingestor = VertexGcsPDFIngestor(str(input_dir))
         extractor = VertexGeminiExtractor()
 
-        documents = ingestor.ingest(str(input_dir))
+        documents = ingestor.ingest()
 
         for doc in documents:
             print(f"🔍 Extracting fields from: {doc.file_path.name}")

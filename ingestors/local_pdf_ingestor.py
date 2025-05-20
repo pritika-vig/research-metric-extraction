@@ -18,18 +18,20 @@ class LocalPDFIngestor(Ingestor):
     Handles multi-column PDFs such as journal articles.
     """
 
-    def ingest(self, directory_path: str) -> List[Document]:
-        input_dir = Path(directory_path)
-        if not input_dir.exists():
-            raise FileNotFoundError(f"Directory not found: {directory_path}")
-        if not input_dir.is_dir():
+    def __init__(self, directory_path: str):
+        self.directory_path = Path(directory_path)
+
+    def ingest(self) -> List[Document]:
+        if not self.directory_path.exists():
+            raise FileNotFoundError(f"Directory not found: {self.directory_path}")
+        if not self.directory_path.is_dir():
             raise NotADirectoryError(
-                f"Specified path is not a directory: {directory_path}"
+                f"Specified path is not a directory: {self.directory_path}"
             )
 
         documents: List[Document] = []
 
-        for file_path in input_dir.glob("*.pdf"):
+        for file_path in self.directory_path.glob("*.pdf"):
             try:
                 with open(file_path, "rb") as f:
                     file_bytes = f.read()
@@ -39,7 +41,7 @@ class LocalPDFIngestor(Ingestor):
                         file_path=file_path,
                         file_bytes=file_bytes,
                         parsed_text=parsed_text,
-                        grobid_response=None,  # Not applicable here
+                        grobid_response=None,
                     )
                 )
                 logger.info(f"Successfully ingested {file_path.name}")

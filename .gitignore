@@ -13,3 +13,4 @@ service-account-key.json
 .flake8
 pyproject.toml
 .pre-commit-config.yaml
+tests/temp/
