@@ -1,7 +1,7 @@
 # tests/mocks/mock_gcs_client.py
 
-from pathlib import Path
 from typing import Dict
+
 
 class MockBlob:
     def __init__(self, name):
@@ -17,6 +17,7 @@ class MockBlob:
     def delete(self):
         self._uploaded = False
 
+
 class MockBucket:
     def __init__(self):
         self._blobs: Dict[str, MockBlob] = {}
@@ -25,6 +26,7 @@ class MockBucket:
         if name not in self._blobs:
             self._blobs[name] = MockBlob(name)
         return self._blobs[name]
+
 
 class MockStorageClient:
     def __init__(self):

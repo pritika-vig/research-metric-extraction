@@ -1,13 +1,16 @@
 # ingestors/local_pdf_ingestor.py
 
+import logging
+from pathlib import Path
+from typing import List
+
+import pdfplumber
+
 from ingestors.ingestor import Ingestor
 from models.document import Document
-from pathlib import Path
-import pdfplumber
-from typing import List
-import logging
 
 logger = logging.getLogger(__name__)
+
 
 class LocalPDFIngestor(Ingestor):
     """
@@ -20,7 +23,9 @@ class LocalPDFIngestor(Ingestor):
         if not input_dir.exists():
             raise FileNotFoundError(f"Directory not found: {directory_path}")
         if not input_dir.is_dir():
-            raise NotADirectoryError(f"Specified path is not a directory: {directory_path}")
+            raise NotADirectoryError(
+                f"Specified path is not a directory: {directory_path}"
+            )
 
         documents: List[Document] = []
 
@@ -34,7 +39,7 @@ class LocalPDFIngestor(Ingestor):
                         file_path=file_path,
                         file_bytes=file_bytes,
                         parsed_text=parsed_text,
-                        grobid_response=None  # Not applicable here
+                        grobid_response=None,  # Not applicable here
                     )
                 )
                 logger.info(f"Successfully ingested {file_path.name}")
@@ -54,8 +59,8 @@ class LocalPDFIngestor(Ingestor):
                 center_x = width / 2
 
                 words = page.extract_words()
-                left_words = [w for w in words if w['x0'] < center_x]
-                right_words = [w for w in words if w['x0'] >= center_x]
+                left_words = [w for w in words if w["x0"] < center_x]
+                right_words = [w for w in words if w["x0"] >= center_x]
 
                 full_left_text.extend(self._group_words_into_lines(left_words))
                 full_right_text.extend(self._group_words_into_lines(right_words))
@@ -68,16 +73,16 @@ class LocalPDFIngestor(Ingestor):
         current_line = []
         last_top = None
 
-        for word in sorted(words, key=lambda w: (w['top'], w['x0'])):
-            if last_top is None or abs(word['top'] - last_top) > 5:
+        for word in sorted(words, key=lambda w: (w["top"], w["x0"])):
+            if last_top is None or abs(word["top"] - last_top) > 5:
                 if current_line:
-                    lines.append(' '.join(w['text'] for w in current_line))
+                    lines.append(" ".join(w["text"] for w in current_line))
                 current_line = [word]
-                last_top = word['top']
+                last_top = word["top"]
             else:
                 current_line.append(word)
 
         if current_line:
-            lines.append(' '.join(w['text'] for w in current_line))
+            lines.append(" ".join(w["text"] for w in current_line))
 
         return lines

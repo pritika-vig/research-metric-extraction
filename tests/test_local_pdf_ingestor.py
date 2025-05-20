@@ -1,11 +1,13 @@
 # tests/local_pdf_ingestor_test.py
 
-import unittest
 import os
 import tempfile
+import unittest
+
 import fitz  # PyMuPDF
+
 from ingestors.local_pdf_ingestor import LocalPDFIngestor
-from models.document import Document
+
 
 class TestLocalPDFIngestor(unittest.TestCase):
     def setUp(self):
@@ -45,53 +47,60 @@ class TestLocalPDFIngestor(unittest.TestCase):
         raise AssertionError(f"Document {filename} not found in results")
 
     def test_ingest_single_column_pdf(self):
-        self._create_pdf('single_column.pdf', ['Line 1', 'Line 2', 'Line 3'])
+        self._create_pdf("single_column.pdf", ["Line 1", "Line 2", "Line 3"])
 
         ingestor = LocalPDFIngestor()
         result = ingestor.ingest(self.test_dir.name)
 
-        text = self._get_document_text(result, 'single_column.pdf')
-        self.assertIn('Line 1', text)
-        self.assertIn('Line 2', text)
-        self.assertIn('Line 3', text)
+        text = self._get_document_text(result, "single_column.pdf")
+        self.assertIn("Line 1", text)
+        self.assertIn("Line 2", text)
+        self.assertIn("Line 3", text)
 
     def test_ingest_two_column_pdf(self):
-        self._create_pdf('two_column.pdf', 
-                         left_texts=['Left 1', 'Left 2'],
-                         right_texts=['Right 1', 'Right 2'])
+        self._create_pdf(
+            "two_column.pdf",
+            left_texts=["Left 1", "Left 2"],
+            right_texts=["Right 1", "Right 2"],
+        )
 
         ingestor = LocalPDFIngestor()
         result = ingestor.ingest(self.test_dir.name)
 
-        text = self._get_document_text(result, 'two_column.pdf')
-        self.assertIn('Left 1', text)
-        self.assertIn('Left 2', text)
-        self.assertIn('Right 1', text)
-        self.assertIn('Right 2', text)
+        text = self._get_document_text(result, "two_column.pdf")
+        self.assertIn("Left 1", text)
+        self.assertIn("Left 2", text)
+        self.assertIn("Right 1", text)
+        self.assertIn("Right 2", text)
 
-        left_index = text.find('Left 1')
-        right_index = text.find('Right 1')
-        self.assertLess(left_index, right_index, "Left column should come before right column")
+        left_index = text.find("Left 1")
+        right_index = text.find("Right 1")
+        self.assertLess(
+            left_index, right_index, "Left column should come before right column"
+        )
 
     def test_ingest_mixed_column_pdf(self):
-        self._create_pdf('mixed_column.pdf',
-                         left_texts=['Intro Paragraph', 'Left Body'],
-                         right_texts=['Right Body'])
+        self._create_pdf(
+            "mixed_column.pdf",
+            left_texts=["Intro Paragraph", "Left Body"],
+            right_texts=["Right Body"],
+        )
 
         ingestor = LocalPDFIngestor()
         result = ingestor.ingest(self.test_dir.name)
 
-        text = self._get_document_text(result, 'mixed_column.pdf')
-        self.assertIn('Intro Paragraph', text)
-        self.assertIn('Left Body', text)
-        self.assertIn('Right Body', text)
+        text = self._get_document_text(result, "mixed_column.pdf")
+        self.assertIn("Intro Paragraph", text)
+        self.assertIn("Left Body", text)
+        self.assertIn("Right Body", text)
 
-        intro_index = text.find('Intro Paragraph')
-        left_index = text.find('Left Body')
-        right_index = text.find('Right Body')
+        intro_index = text.find("Intro Paragraph")
+        left_index = text.find("Left Body")
+        right_index = text.find("Right Body")
 
         self.assertLess(intro_index, left_index)
         self.assertLess(left_index, right_index)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -2,7 +2,9 @@
 
 from dataclasses import dataclass
 from typing import List
+
 from models.extraction_field_spec import ExtractionFieldSpec
+
 
 @dataclass
 class ExtractionConfig:

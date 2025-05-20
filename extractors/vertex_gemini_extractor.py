@@ -2,16 +2,15 @@
 
 import os
 from typing import List
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
 from vertexai import init
 from vertexai.preview.generative_models import GenerativeModel, Part
 
-from models.document import Document
-from models.extracted_document_data import ExtractedField, ExtractedDocumentData
-from models.extraction_config import ExtractionConfig
-from models.extraction_field_spec import ExtractionFieldSpec
 from extractors.extractor import Extractor
+from models.document import Document
+from models.extracted_document_data import ExtractedDocumentData, ExtractedField
+from models.extraction_config import ExtractionConfig
 
 load_dotenv()
 
@@ -23,7 +22,9 @@ class VertexGeminiExtractor(Extractor):
         init(project=self.project_id, location=self.region)
         self.model = GenerativeModel("gemini-2.0-flash")
 
-    def extract(self, document: Document, config: ExtractionConfig) -> ExtractedDocumentData:
+    def extract(
+        self, document: Document, config: ExtractionConfig
+    ) -> ExtractedDocumentData:
         if not document.gcs_metadata:
             raise ValueError(f"Document {document.file_path.name} has no gcs_metadata")
 
@@ -38,7 +39,7 @@ class VertexGeminiExtractor(Extractor):
             generation_config={
                 "temperature": 0.3,
                 "max_output_tokens": 4096,
-            }
+            },
         )
 
         response_text = result.text.strip()
@@ -46,35 +47,66 @@ class VertexGeminiExtractor(Extractor):
         return ExtractedDocumentData(document=document, fields=fields)
 
     def _build_prompt(self, config: ExtractionConfig) -> str:
-        field_list = "\n".join(f"- {f.name}" for f in config.fields)
-
-        field_defs = "\n".join([
-            f'- "{f.name}": {f.description}'
-            for f in config.fields
-        ])
-
-        output_format = "\n".join([
-            f"{f.name}:\n  value: ...\n  evidence_quote: ...\n  page_number: ..."
-            for f in config.fields
-        ])
-
-        return (
-        "You are analyzing a scientific research paper related to AI tools in healthcare.\n\n"
-        "Your task is to extract structured information about how patient or public engagement was reported in the study, "
-        "following key principles from the Montreal Model and the Holistic E-Health Framework.\n\n"
-        "Extract **each of the following fields**, providing:\n"
-        "  - The value\n"
-        "  - A **direct quote** from the paper that supports the value (or 'N/A' if none)\n"
-        "  - The **page number** where that quote appears (or 'N/A')\n\n"
-        "Please return data in this format:\n"
-        f"{output_format}\n\n"
-        "### Field Definitions:\n"
-        f"{field_defs}\n\n"
-        "Use your best judgment to locate implicit as well as explicit evidence.\n"
-        "Be concise and accurate, and assume the audience is evaluating use of engagement frameworks in applied research."
+        field_defs = "\n".join(
+            [f'- "{f.name}": {f.description}' for f in config.fields]
         )
 
-    def _parse_response(self, response: str, config: ExtractionConfig) -> List[ExtractedField]:
+        output_format = "\n".join(
+            [
+                f"{f.name}:\n  value: ...\n  evidence_quote: ...\n  page_number: ..."
+                for f in config.fields
+            ]
+        )
+
+        example_block = """
+            ### Example:
+
+            Title:
+                value: AI for Patient Outcomes
+                evidence_quote: "This study, titled 'AI for Patient Outcomes', explores the use of
+                artificial intelligence to enhance recovery metrics."
+                page_number: 1
+
+            Patient Co-authors:
+                value: Yes
+                evidence_quote: "The research team included two patient advocates as co-authors
+                to ensure relevance and inclusivity."
+                page_number: 2
+
+            Type of Engagement (Montreal Model continuum):
+                value: Collaboration
+                evidence_quote: "Patients collaborated with developers during the design and testing of the AI model."
+                page_number: 3
+
+            Impact of Engagement:
+                value: Improved system usability
+                evidence_quote: "User feedback from patients helped refine the interface
+                and increased adoption rates."
+                page_number: 4
+        """
+
+        return (
+            "You are analyzing a scientific research paper related to AI tools in healthcare.\n\n"
+            "Your task is to extract structured information about how patient or public "
+            "engagement was reported in the study, "
+            "following key principles from the Montreal Model and the Holistic E-Health Framework.\n\n"
+            "Extract **each of the following fields**, providing:\n"
+            "- The value\n"
+            "- A **direct quote** from the paper that supports the value (or 'N/A' if none)\n"
+            "- The **page number** where that quote appears (or 'N/A')\n\n"
+            "### Example:\n"
+            f"{example_block}\n\n"
+            "### Respond in the following format:\n"
+            f"{output_format}\n\n"
+            "### Field Definitions:\n"
+            f"{field_defs}\n\n"
+            "Use your best judgment to locate implicit as well as explicit evidence. "
+            "Be concise and accurate."
+        )
+
+    def _parse_response(
+        self, response: str, config: ExtractionConfig
+    ) -> List[ExtractedField]:
         extracted_fields = []
         field_map = {f.name.lower(): f for f in config.fields}
 
@@ -88,16 +120,21 @@ class VertexGeminiExtractor(Extractor):
                 continue
 
             if not line.startswith("  "):  # New field
-                if current_field and 'value' in field_data:
+                if current_field and "value" in field_data:
                     spec = field_map.get(current_field.lower())
                     if spec:
-                        extracted_fields.append(ExtractedField(
-                            name=spec.name,
-                            description=spec.description,
-                            value=field_data.get('value'),
-                            evidence_quote=field_data.get('evidence_quote'),
-                            page_number=int(field_data['page_number']) if field_data.get('page_number') and field_data['page_number'].isdigit() else None
-                        ))
+                        extracted_fields.append(
+                            ExtractedField(
+                                name=spec.name,
+                                description=spec.description,
+                                value=field_data.get("value"),
+                                evidence_quote=field_data.get("evidence_quote"),
+                                page_number=int(field_data["page_number"])
+                                if field_data.get("page_number")
+                                and field_data["page_number"].isdigit()
+                                else None,
+                            )
+                        )
                 current_field = line.split(":", 1)[0].strip()
                 field_data = {}
             else:
@@ -107,26 +144,33 @@ class VertexGeminiExtractor(Extractor):
                     field_data[key.strip()] = val.strip()
 
         # Final field
-        if current_field and 'value' in field_data:
+        if current_field and "value" in field_data:
             spec = field_map.get(current_field.lower())
             if spec:
-                extracted_fields.append(ExtractedField(
-                    name=spec.name,
-                    description=spec.description,
-                    value=field_data.get('value'),
-                    evidence_quote=field_data.get('evidence_quote'),
-                    page_number=int(field_data['page_number']) if field_data.get('page_number') and field_data['page_number'].isdigit() else None
-                ))
+                extracted_fields.append(
+                    ExtractedField(
+                        name=spec.name,
+                        description=spec.description,
+                        value=field_data.get("value"),
+                        evidence_quote=field_data.get("evidence_quote"),
+                        page_number=int(field_data["page_number"])
+                        if field_data.get("page_number")
+                        and field_data["page_number"].isdigit()
+                        else None,
+                    )
+                )
 
         # Fill in missing fields
         for spec in config.fields:
             if not any(f.name == spec.name for f in extracted_fields):
-                extracted_fields.append(ExtractedField(
-                    name=spec.name,
-                    description=spec.description,
-                    value=None,
-                    evidence_quote=None,
-                    page_number=None
-                ))
+                extracted_fields.append(
+                    ExtractedField(
+                        name=spec.name,
+                        description=spec.description,
+                        value=None,
+                        evidence_quote=None,
+                        page_number=None,
+                    )
+                )
 
         return extracted_fields

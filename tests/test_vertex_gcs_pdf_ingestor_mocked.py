@@ -3,9 +3,10 @@
 # Mocked test. Does not hit live gcp buckets.
 
 import uuid
-from pathlib import Path
+
 from ingestors.vertex_gcs_pdf_ingestor import VertexGcsPDFIngestor
 from tests.mocks.mock_gcs_client import MockStorageClient
+
 
 def test_mocked_upload_and_skip(temp_test_dir):
     test_pdf = temp_test_dir / f"mock_test_{uuid.uuid4().hex}.pdf"

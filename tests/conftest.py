@@ -3,7 +3,9 @@
 import shutil
 import uuid
 from pathlib import Path
+
 import pytest
+
 
 @pytest.fixture
 def temp_test_dir():
@@ -12,6 +14,7 @@ def temp_test_dir():
     dir_path.mkdir(parents=True, exist_ok=True)
     yield dir_path
     shutil.rmtree(dir_path)
+
 
 @pytest.fixture
 def test_pdf_file(temp_test_dir):

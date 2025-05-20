@@ -1,13 +1,14 @@
 # tests/test_grobid_pdf_ingestor.py
 
 import unittest
-from unittest.mock import patch, mock_open, MagicMock
 from pathlib import Path
+from unittest.mock import MagicMock, mock_open, patch
+
 from ingestors.grobid_pdf_ingestor import GrobidPDFIngestor
 from models.document import Document
 
-class TestGrobidPDFIngestor(unittest.TestCase):
 
+class TestGrobidPDFIngestor(unittest.TestCase):
     @patch("ingestors.grobid_pdf_ingestor.Path.is_dir", return_value=False)
     def test_invalid_directory_raises(self, mock_is_dir):
         ingestor = GrobidPDFIngestor()
@@ -18,9 +19,11 @@ class TestGrobidPDFIngestor(unittest.TestCase):
     @patch("builtins.open", new_callable=mock_open, read_data=b"%PDF-1.4")
     @patch("requests.post")
     @patch("ingestors.grobid_pdf_ingestor.Path.is_dir", return_value=True)
-    def test_successful_ingestion(self, mock_is_dir, mock_requests_post, mock_open_file, mock_glob):
+    def test_successful_ingestion(
+        self, mock_is_dir, mock_requests_post, mock_open_file, mock_glob
+    ):
         # ✅ Realistic mock TEI XML from GROBID
-        sample_xml = '''<?xml version="1.0" encoding="UTF-8"?>
+        sample_xml = """<?xml version="1.0" encoding="UTF-8"?>
         <TEI xmlns="http://www.tei-c.org/ns/1.0">
             <teiHeader>
                 <fileDesc>
@@ -58,7 +61,7 @@ class TestGrobidPDFIngestor(unittest.TestCase):
                     </div>
                 </back>
             </text>
-        </TEI>'''
+        </TEI>"""
 
         mock_response = MagicMock()
         mock_response.status_code = 200
@@ -84,7 +87,9 @@ class TestGrobidPDFIngestor(unittest.TestCase):
     @patch("builtins.open", new_callable=mock_open, read_data=b"%PDF-1.4")
     @patch("requests.post")
     @patch("ingestors.grobid_pdf_ingestor.Path.is_dir", return_value=True)
-    def test_grobid_error_handling(self, mock_is_dir, mock_requests_post, mock_open_file, mock_glob):
+    def test_grobid_error_handling(
+        self, mock_is_dir, mock_requests_post, mock_open_file, mock_glob
+    ):
         mock_response = MagicMock()
         mock_response.status_code = 500
         mock_response.text = "Internal Server Error"
@@ -98,6 +103,7 @@ class TestGrobidPDFIngestor(unittest.TestCase):
         documents = ingestor.ingest("/some/valid/path")
 
         self.assertEqual(len(documents), 0)
+
 
 if __name__ == "__main__":
     unittest.main()

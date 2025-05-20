@@ -1,9 +1,11 @@
 # tests/test_vertex_gcs_pdf_ingestor.py
 
 import uuid
-from pathlib import Path
+
 from google.cloud import storage
+
 from ingestors.vertex_gcs_pdf_ingestor import VertexGcsPDFIngestor
+
 
 def test_pdf_upload_and_cleanup(temp_test_dir, test_pdf_file):
     ingestor = VertexGcsPDFIngestor()
@@ -13,10 +15,13 @@ def test_pdf_upload_and_cleanup(temp_test_dir, test_pdf_file):
     assert len(documents) == 1
 
     doc = documents[0]
-    blob = storage.Client().bucket(ingestor.bucket_name).blob(doc.gcs_metadata.blob_name)
+    blob = (
+        storage.Client().bucket(ingestor.bucket_name).blob(doc.gcs_metadata.blob_name)
+    )
 
     assert blob.exists()
     blob.delete()
+
 
 def test_skip_existing_blob(temp_test_dir):
     ingestor = VertexGcsPDFIngestor()
@@ -36,7 +41,6 @@ def test_skip_existing_blob(temp_test_dir):
     upload_attempted = {"count": 0}
 
     def wrapped_upload(file, blob_name):
-        uri = f"gs://{ingestor.bucket_name}/{blob_name}"
         if not storage.Client().bucket(ingestor.bucket_name).blob(blob_name).exists():
             upload_attempted["count"] += 1
         return ingestor.upload_to_gcs.__wrapped__(file, blob_name)

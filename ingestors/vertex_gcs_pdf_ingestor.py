@@ -7,12 +7,13 @@ from typing import List
 from dotenv import load_dotenv
 from google.cloud import storage
 
+from ingestors.ingestor import Ingestor
 from models.document import Document
 from models.gcs_metadata import GCSMetadata
-from ingestors.ingestor import Ingestor
 
 # Load environment variables from .env
 load_dotenv()
+
 
 class VertexGcsPDFIngestor(Ingestor):
     def __init__(self):
@@ -21,7 +22,9 @@ class VertexGcsPDFIngestor(Ingestor):
         self.region = os.getenv("GCP_REGION", "us-central1")
 
         if not self.bucket_name or not self.project_id:
-            raise ValueError("Missing GCS_BUCKET or GCP_PROJECT_ID in environment variables")
+            raise ValueError(
+                "Missing GCS_BUCKET or GCP_PROJECT_ID in environment variables"
+            )
 
         self.gcs_client = storage.Client()
 
@@ -47,15 +50,11 @@ class VertexGcsPDFIngestor(Ingestor):
             gcs_uri = self.upload_to_gcs(pdf_file, blob_name)
 
             gcs_metadata = GCSMetadata(
-                gcs_uri=gcs_uri,
-                blob_name=blob_name,
-                bucket_name=self.bucket_name
+                gcs_uri=gcs_uri, blob_name=blob_name, bucket_name=self.bucket_name
             )
 
             doc = Document(
-                file_path=pdf_file,
-                parsed_text=None,
-                gcs_metadata=gcs_metadata
+                file_path=pdf_file, parsed_text=None, gcs_metadata=gcs_metadata
             )
             documents.append(doc)
 

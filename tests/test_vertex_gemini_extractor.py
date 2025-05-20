@@ -1,12 +1,14 @@
 # tests/test_vertex_gemini_extractor.py
 
-from unittest.mock import MagicMock
 from pathlib import Path
-from models.document import Document
-from models.gcs_metadata import GCSMetadata
-from models.extraction_field_spec import ExtractionFieldSpec
-from models.extraction_config import ExtractionConfig
+from unittest.mock import MagicMock
+
 from extractors.vertex_gemini_extractor import VertexGeminiExtractor
+from models.document import Document
+from models.extraction_config import ExtractionConfig
+from models.extraction_field_spec import ExtractionFieldSpec
+from models.gcs_metadata import GCSMetadata
+
 
 # Test that well-formed Gemini responses are parsed correctly
 # into ExtractedField objects
@@ -18,15 +20,15 @@ def test_extract_parses_mock_response_correctly():
         "  page_number: 1\n"
         "Patient Co-authors:\n"
         "  value: Yes\n"
-        "  evidence_quote: \"Co-authored by patients as part of the collaboration.\"\n"
+        '  evidence_quote: "Co-authored by patients as part of the collaboration."\n'
         "  page_number: 2\n"
         "Type of Engagement:\n"
         "  value: Collaboration\n"
-        "  evidence_quote: \"The project was a collaboration.\"\n"
+        '  evidence_quote: "The project was a collaboration."\n'
         "  page_number: 2\n"
         "Impact of Engagement:\n"
         "  value: Patients influenced study design\n"
-        "  evidence_quote: \"Patients helped shape the study design.\"\n"
+        '  evidence_quote: "Patients helped shape the study design."\n'
         "  page_number: 3\n"
     )
 
@@ -36,8 +38,10 @@ def test_extract_parses_mock_response_correctly():
             ExtractionFieldSpec("Title", "Study title"),
             ExtractionFieldSpec("Patient Co-authors", "Were patients co-authors?"),
             ExtractionFieldSpec("Type of Engagement", "Montreal Model classification"),
-            ExtractionFieldSpec("Impact of Engagement", "What was the effect of engagement?"),
-        ]
+            ExtractionFieldSpec(
+                "Impact of Engagement", "What was the effect of engagement?"
+            ),
+        ],
     )
 
     document = Document(
@@ -45,8 +49,8 @@ def test_extract_parses_mock_response_correctly():
         gcs_metadata=GCSMetadata(
             gcs_uri="gs://fake-bucket/fake.pdf",
             blob_name="fake.pdf",
-            bucket_name="fake-bucket"
-        )
+            bucket_name="fake-bucket",
+        ),
     )
 
     extractor = VertexGeminiExtractor()
@@ -61,10 +65,14 @@ def test_extract_parses_mock_response_correctly():
 
     title_field = next(f for f in extracted.fields if f.name == "Title")
     assert title_field.value == "AI for Patient Outcomes"
-    assert title_field.evidence_quote == "\"This study is titled 'AI for Patient Outcomes'.\""
+    assert (
+        title_field.evidence_quote
+        == "\"This study is titled 'AI for Patient Outcomes'.\""
+    )
     assert title_field.page_number == 1
 
-# Test that missing fields in the Gemini response are 
+
+# Test that missing fields in the Gemini response are
 # handled gracefully with None/defaults
 def test_extract_handles_missing_fields_gracefully():
     mock_response = (
@@ -79,7 +87,7 @@ def test_extract_handles_missing_fields_gracefully():
         fields=[
             ExtractionFieldSpec("Title", "Study title"),
             ExtractionFieldSpec("Patient Co-authors", "Were patients co-authors?"),
-        ]
+        ],
     )
 
     document = Document(
@@ -87,8 +95,8 @@ def test_extract_handles_missing_fields_gracefully():
         gcs_metadata=GCSMetadata(
             gcs_uri="gs://fake/fake_missing.pdf",
             blob_name="fake_missing.pdf",
-            bucket_name="fake"
-        )
+            bucket_name="fake",
+        ),
     )
 
     extractor = VertexGeminiExtractor()
@@ -109,7 +117,8 @@ def test_extract_handles_missing_fields_gracefully():
     assert patient_field.evidence_quote is None
     assert patient_field.page_number is None
 
-# Test that malformed output (no colons or structured format) 
+
+# Test that malformed output (no colons or structured format)
 # results in empty values but no crash
 def test_extract_handles_malformed_text():
     mock_response = (
@@ -122,7 +131,7 @@ def test_extract_handles_malformed_text():
         fields=[
             ExtractionFieldSpec("Title", "Study title"),
             ExtractionFieldSpec("Patient Co-authors", "Were patients co-authors?"),
-        ]
+        ],
     )
 
     document = Document(
@@ -130,8 +139,8 @@ def test_extract_handles_malformed_text():
         gcs_metadata=GCSMetadata(
             gcs_uri="gs://fake/fake_malformed.pdf",
             blob_name="fake_malformed.pdf",
-            bucket_name="fake"
-        )
+            bucket_name="fake",
+        ),
     )
 
     extractor = VertexGeminiExtractor()
@@ -144,14 +153,15 @@ def test_extract_handles_malformed_text():
     assert extracted.get_field_value("Title") is None
     assert extracted.get_field_value("Patient Co-authors") is None
 
-# Test that an empty string response from Gemini is handled safely 
+
+# Test that an empty string response from Gemini is handled safely
 # with all fields set to None
 def test_extract_handles_empty_response():
     config = ExtractionConfig(
         name="Test Empty Response",
         fields=[
             ExtractionFieldSpec("Title", "Study title"),
-        ]
+        ],
     )
 
     document = Document(
@@ -159,8 +169,8 @@ def test_extract_handles_empty_response():
         gcs_metadata=GCSMetadata(
             gcs_uri="gs://fake/fake_empty.pdf",
             blob_name="fake_empty.pdf",
-            bucket_name="fake"
-        )
+            bucket_name="fake",
+        ),
     )
 
     extractor = VertexGeminiExtractor()
@@ -171,6 +181,7 @@ def test_extract_handles_empty_response():
     extracted = extractor.extract(document, config)
 
     assert extracted.get_field_value("Title") is None
+
 
 def test_extract_handles_missing_evidence_and_page():
     mock_response = (
@@ -184,7 +195,7 @@ def test_extract_handles_missing_evidence_and_page():
         name="Test Missing Evidence",
         fields=[
             ExtractionFieldSpec("Title", "Study title"),
-        ]
+        ],
     )
 
     document = Document(
@@ -192,8 +203,8 @@ def test_extract_handles_missing_evidence_and_page():
         gcs_metadata=GCSMetadata(
             gcs_uri="gs://fake/missing_evidence.pdf",
             blob_name="missing_evidence.pdf",
-            bucket_name="fake"
-        )
+            bucket_name="fake",
+        ),
     )
 
     extractor = VertexGeminiExtractor()

@@ -1,16 +1,21 @@
-import requests
+import logging
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import List
-import xml.etree.ElementTree as ET
-from models.document import Document
+
+import requests
+
 from ingestors.ingestor import Ingestor
-import logging
+from models.document import Document
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
+
 class GrobidPDFIngestor(Ingestor):
-    def __init__(self, grobid_url: str = "http://localhost:8070", verbose: bool = False):
+    def __init__(
+        self, grobid_url: str = "http://localhost:8070", verbose: bool = False
+    ):
         self.grobid_url = grobid_url.rstrip("/")
         self.verbose = verbose
 
@@ -28,11 +33,15 @@ class GrobidPDFIngestor(Ingestor):
 
                 with open(pdf_file, "rb") as f:
                     file_bytes = f.read()
-                    files = {'input': (pdf_file.name, file_bytes, 'application/pdf')}
-                    response = requests.post(f"{self.grobid_url}/api/processFulltextDocument", files=files)
+                    files = {"input": (pdf_file.name, file_bytes, "application/pdf")}
+                    response = requests.post(
+                        f"{self.grobid_url}/api/processFulltextDocument", files=files
+                    )
 
                 if response.status_code != 200:
-                    raise Exception(f"GROBID error: {response.status_code} - {response.text}")
+                    raise Exception(
+                        f"GROBID error: {response.status_code} - {response.text}"
+                    )
 
                 parsed_text = self.parse_grobid_response(response.text)
 
@@ -40,7 +49,7 @@ class GrobidPDFIngestor(Ingestor):
                     file_path=pdf_file,
                     file_bytes=file_bytes,
                     grobid_response=response.text,
-                    parsed_text=parsed_text
+                    parsed_text=parsed_text,
                 )
                 extracted_documents.append(doc)
 
@@ -57,7 +66,7 @@ class GrobidPDFIngestor(Ingestor):
         Extracts the entire body text (excluding references, abstract, and metadata) from GROBID's TEI XML.
         """
         paragraphs = []
-        ns = {'tei': 'http://www.tei-c.org/ns/1.0'}
+        ns = {"tei": "http://www.tei-c.org/ns/1.0"}
         root = ET.fromstring(xml_text)
 
         # Select all paragraphs within the main body of the article

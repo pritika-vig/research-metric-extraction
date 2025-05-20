@@ -1,6 +1,8 @@
 from abc import ABC, abstractmethod
 from typing import List
+
 from models.document import Document
+
 
 class Ingestor(ABC):
     @abstractmethod

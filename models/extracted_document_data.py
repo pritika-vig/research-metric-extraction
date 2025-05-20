@@ -1,8 +1,10 @@
 # models/extracted_document_data.py
 
 from dataclasses import dataclass
+from typing import List, Optional
+
 from models.document import Document
-from typing import Optional, List
+
 
 @dataclass
 @dataclass
@@ -12,6 +14,7 @@ class ExtractedField:
     value: Optional[str] = None
     evidence_quote: Optional[str] = None
     page_number: Optional[int] = None
+
 
 class ExtractedDocumentData:
     def __init__(self, document: Document, fields: List[ExtractedField]):

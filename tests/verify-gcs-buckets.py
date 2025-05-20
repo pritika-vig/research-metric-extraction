@@ -1,9 +1,10 @@
 # verify_gcs_bucket.py
 
 import os
+
 from dotenv import load_dotenv
+from google.api_core.exceptions import Forbidden, NotFound
 from google.cloud import storage
-from google.api_core.exceptions import NotFound, Forbidden
 
 # Load .env variables
 load_dotenv()
@@ -33,6 +34,9 @@ try:
 except NotFound:
     print(f"ERROR: Bucket '{bucket_name}' was not found.")
 except Forbidden:
-    print(f"ERROR: Access to bucket '{bucket_name}' is forbidden. Check your service account permissions.")
+    print(
+        f"ERROR: Access to bucket '{bucket_name}' is forbidden. "
+        "Check your service account permissions."
+    )
 except Exception as e:
     print(f"ERROR: {str(e)}")
