@@ -1,0 +1,187 @@
+{
+  "source_file": "documents/mhealth-2021-6-e27102.pdf",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Considerations for the Design and Implementation of COVID-19 Contact Tracing Apps: Scoping Review",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Esli Osmanlliu, Edmond Rafie, Sylvain B\u00e9dard, Jesseca Paquette, Genevieve Gore, Marie-Pascale Pomey",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "JMIR MHEALTH AND UHEALTH",
+      "evidence_quote": "N/A",
+      "page_number": 1
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Peer-reviewed",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "09.06.2021",
+      "evidence_quote": "Originally published in JMIR mHealth and uHealth (https://mhealth.jmir.org), 09.06.2021.",
+      "page_number": 17
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "eHealth, Public Health",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "Canada",
+      "evidence_quote": "Research Institute of the McGill University Health Centre, Montreal, QC, Canada",
+      "page_number": 1
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Scoping Review",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "This study aims to examine the extent to which design and implementation considerations for contact tracing apps are detailed in the available literature, focusing on aspects related to participatory and responsible eHealth innovation, and synthesize recommendations that support the development of successful COVID-19 contact tracing apps and related eHealth technologies.",
+      "evidence_quote": "\"This study aims to examine the extent to which design and implementation considerations for contact tracing apps are detailed in the available literature, focusing on aspects related to participatory and responsible eHealth innovation, and synthesize recommendations that support the development of successful COVID-19 contact tracing apps and related eHealth technologies.\"",
+      "page_number": 1
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "Most studies lacked fundamental aspects of eHealth development and implementation. Stakeholder consultation was the most frequently described level of engagement.",
+      "evidence_quote": "Most studies lacked fundamental aspects of eHealth development and implementation...Regarding the Montreal model, stakeholder consultation was the most frequently described level of engagement in the development of contact tracing apps (n=24, 38%), while collaboration and partnership were cited the least (n=2, 3%).",
+      "page_number": 1
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any involvement of patients or the public? This includes participation, feedback, consultation, or co-design.",
+      "value": "Yes",
+      "evidence_quote": "\"Regarding the Montreal model, stakeholder consultation was the most frequently described level of engagement in the development of contact tracing apps (n=24, 38%), while collaboration and partnership were cited the least (n=2, 3%).\"",
+      "page_number": 1
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information, Consultation, Collaboration, or Partnership.",
+      "value": "Consultation",
+      "evidence_quote": "\"Regarding the Montreal model, stakeholder consultation was the most frequently described level of engagement in the development of contact tracing apps (n=24, 38%), while collaboration and partnership were cited the least (n=2, 3%).\"",
+      "page_number": 1
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "The study did not report on the impact of engagement, but noted that stakeholder consultation was the most frequently described level of engagement.",
+      "evidence_quote": "\"Regarding the Montreal model, stakeholder consultation was the most frequently described level of engagement in the development of contact tracing apps (n=24, 38%), while collaboration and partnership were cited the least (n=2, 3%).\"",
+      "page_number": 1
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "Yes",
+      "evidence_quote": "\"Less than half of the selected articles cited the need for a participatory process (n=25, 40%), which nonetheless was the most frequently referenced item of the Framework to Improve the Uptake and Impact of eHealth Technologies.\"",
+      "page_number": 1
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "\"Conversely, only 16% (n=10) of the studies discussed continuous evaluation cycles of contact tracing apps.\"",
+      "page_number": 7
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "Yes",
+      "evidence_quote": "\"Persuasive design techniques were mentioned in 37% (n=23) of the articles\"",
+      "page_number": 7
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information passively provided to patients or the public without requesting feedback or participation?",
+      "value": "No",
+      "evidence_quote": "\"None of the selected articles referred to documentation given to citizens or patients on COVID-19 contact tracing apps, leaving the Montreal model \u201cinformation\u201d component [42] unaddressed\"",
+      "page_number": 8
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "Yes",
+      "evidence_quote": "\"On the other hand, stakeholder consultation was the most frequently described level of engagement (n=24, 38%).\"",
+      "page_number": 8
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "Yes",
+      "evidence_quote": "\"One article briefly mentioned collaboration, as the responses to the conducted surveys \"likely prompted the pivot to wearable tech due to its observation of the public's reluctance to use their mobile phones for contact-tracing\" [50].\"",
+      "page_number": 8
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "Yes",
+      "evidence_quote": "\"Only 3% (2/63) mentioned the importance of partnership in the development and implementation of contact tracing apps, but none of the included articles described an app development process occurring in partnership with citizens or patients.\"",
+      "page_number": 8
+    }
+  ]
+}

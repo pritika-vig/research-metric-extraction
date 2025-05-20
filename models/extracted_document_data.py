@@ -1,16 +1,17 @@
 # models/extracted_document_data.py
 
+from dataclasses import dataclass
 from models.document import Document
 from typing import Optional, List
 
+@dataclass
+@dataclass
 class ExtractedField:
-    def __init__(self, name: str, description: str, value: Optional[str] = None):
-        self.name = name
-        self.description = description
-        self.value = value
-
-    def __repr__(self):
-        return f"{self.name}: {self.value or 'N/A'}"
+    name: str
+    description: str
+    value: Optional[str] = None
+    evidence_quote: Optional[str] = None
+    page_number: Optional[int] = None
 
 class ExtractedDocumentData:
     def __init__(self, document: Document, fields: List[ExtractedField]):
@@ -24,4 +25,8 @@ class ExtractedDocumentData:
         return None
 
     def __repr__(self):
-        return f"<ExtractedDocumentData for {self.document.file_path.name}>"
+        field_summaries = "\n  ".join(
+            f"{f.name}: {f.value or 'N/A'} (Evidence: {f.evidence_quote or 'N/A'}, Page: {f.page_number or 'N/A'})"
+            for f in self.fields
+        )
+        return f"<ExtractedDocumentData for {self.document.file_path.name}>\n  {field_summaries}"
