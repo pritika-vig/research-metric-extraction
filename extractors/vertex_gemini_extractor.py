@@ -1,5 +1,6 @@
 # extractors/vertex_gemini_extractor.py
 
+import logging
 import os
 from typing import List
 
@@ -13,6 +14,8 @@ from models.extracted_document_data import ExtractedDocumentData, ExtractedField
 from models.extraction_config import ExtractionConfig
 
 load_dotenv()
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
 
 
 class VertexGeminiExtractor(Extractor):
@@ -26,23 +29,34 @@ class VertexGeminiExtractor(Extractor):
         self, document: Document, config: ExtractionConfig
     ) -> ExtractedDocumentData:
         if not document.gcs_metadata:
-            raise ValueError(f"Document {document.file_path.name} has no gcs_metadata")
+            raise ValueError(
+                f"Document {getattr(document.file_path, 'name', 'unknown')} has no gcs_metadata"
+            )
 
         gcs_uri = document.gcs_metadata.gcs_uri
+        file_format = document.gcs_metadata.format
+
+        if file_format == "pdf":
+            mime_type = "application/pdf"
+        elif file_format == "html":
+            mime_type = "text/html"
+        else:
+            raise ValueError(f"Unsupported file format: {file_format}")
+
         prompt = self._build_prompt(config)
 
         result = self.model.generate_content(
             [
                 prompt,
-                Part.from_uri(gcs_uri, mime_type="application/pdf"),
+                Part.from_uri(gcs_uri, mime_type=mime_type),
             ],
             generation_config={
                 "temperature": 0.3,
                 "max_output_tokens": 4096,
             },
         )
-
         response_text = result.text.strip()
+        logger.info(f"Gemini raw response:\n{response_text}")
         fields = self._parse_response(response_text, config)
         return ExtractedDocumentData(document=document, fields=fields)
 
@@ -87,21 +101,21 @@ class VertexGeminiExtractor(Extractor):
 
         return (
             "You are analyzing a scientific research paper related to AI tools in healthcare.\n\n"
-            "Your task is to extract structured information about how patient or public "
+            "Your task is to extract information about how patient or public "
             "engagement was reported in the study, "
             "following key principles from the Montreal Model and the Holistic E-Health Framework.\n\n"
+            "The evidence will be used by a human reviewer to validate what you extract.\n\n"
             "Extract **each of the following fields**, providing:\n"
             "- The value\n"
             "- A **direct quote** from the paper that supports the value (or 'N/A' if none)\n"
             "- The **page number** where that quote appears (or 'N/A')\n\n"
-            "### Example:\n"
+            "### Example (strict format):\n"
             f"{example_block}\n\n"
-            "### Respond in the following format:\n"
+            "### Respond using **exactly this format**. Do NOT use JSON or any other format:\n"
             f"{output_format}\n\n"
             "### Field Definitions:\n"
             f"{field_defs}\n\n"
-            "Use your best judgment to locate implicit as well as explicit evidence. "
-            "Be concise and accurate."
+            "Strictly follow the format above. Your output will be parsed by a program. Do not change formatting."
         )
 
     def _parse_response(

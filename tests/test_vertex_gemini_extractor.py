@@ -3,6 +3,8 @@
 from pathlib import Path
 from unittest.mock import MagicMock
 
+import pytest
+
 from extractors.vertex_gemini_extractor import VertexGeminiExtractor
 from models.document import Document
 from models.extraction_config import ExtractionConfig
@@ -50,6 +52,7 @@ def test_extract_parses_mock_response_correctly():
             gcs_uri="gs://fake-bucket/fake.pdf",
             blob_name="fake.pdf",
             bucket_name="fake-bucket",
+            format="pdf",
         ),
     )
 
@@ -96,6 +99,7 @@ def test_extract_handles_missing_fields_gracefully():
             gcs_uri="gs://fake/fake_missing.pdf",
             blob_name="fake_missing.pdf",
             bucket_name="fake",
+            format="pdf",
         ),
     )
 
@@ -140,6 +144,7 @@ def test_extract_handles_malformed_text():
             gcs_uri="gs://fake/fake_malformed.pdf",
             blob_name="fake_malformed.pdf",
             bucket_name="fake",
+            format="pdf",
         ),
     )
 
@@ -170,6 +175,7 @@ def test_extract_handles_empty_response():
             gcs_uri="gs://fake/fake_empty.pdf",
             blob_name="fake_empty.pdf",
             bucket_name="fake",
+            format="pdf",
         ),
     )
 
@@ -204,6 +210,7 @@ def test_extract_handles_missing_evidence_and_page():
             gcs_uri="gs://fake/missing_evidence.pdf",
             blob_name="missing_evidence.pdf",
             bucket_name="fake",
+            format="pdf",
         ),
     )
 
@@ -218,3 +225,62 @@ def test_extract_handles_missing_evidence_and_page():
     assert field.value == "AI for Health"
     assert field.evidence_quote == "N/A" or field.evidence_quote is None
     assert field.page_number is None
+
+
+def test_extract_handles_html_document():
+    mock_response = (
+        "Title:\n"
+        "  value: HTML Document Test\n"
+        '  evidence_quote: "Found in HTML body."\n'
+        "  page_number: 1\n"
+    )
+
+    config = ExtractionConfig(
+        name="HTML Format Test",
+        fields=[
+            ExtractionFieldSpec("Title", "Study title"),
+        ],
+    )
+
+    document = Document(
+        file_path=Path("tests/fake.html"),
+        gcs_metadata=GCSMetadata(
+            gcs_uri="gs://fake/html_doc.html",
+            blob_name="html_doc.html",
+            bucket_name="fake",
+            format="html",  # ✅ HTML format triggers correct MIME
+        ),
+    )
+
+    extractor = VertexGeminiExtractor()
+    mock_result = MagicMock()
+    mock_result.text = mock_response
+    extractor.model.generate_content = MagicMock(return_value=mock_result)
+
+    extracted = extractor.extract(document, config)
+
+    assert extracted.get_field_value("Title") == "HTML Document Test"
+
+
+def test_extract_raises_on_unsupported_format():
+    config = ExtractionConfig(
+        name="Unsupported Format",
+        fields=[
+            ExtractionFieldSpec("Title", "Study title"),
+        ],
+    )
+
+    document = Document(
+        file_path=Path("tests/fake.txt"),
+        gcs_metadata=GCSMetadata(
+            gcs_uri="gs://fake/fake.txt",
+            blob_name="fake.txt",
+            bucket_name="fake",
+            format="txt",
+        ),
+    )
+
+    extractor = VertexGeminiExtractor()
+
+    with pytest.raises(ValueError, match="Unsupported file format"):
+        extractor.extract(document, config)

@@ -37,7 +37,6 @@ class PubMedFetcher(Fetcher):
         return papers
 
     def _search_pmc(self, query: str) -> List[str]:
-        """Searches PMC for the query and returns a list of PMC IDs."""
         logger.info(f"Searching PubMed Central for query: '{query}'")
         with Entrez.esearch(db="pmc", term=query, retmax=self.max_results) as handle:
             search_results = Entrez.read(handle)
@@ -46,7 +45,6 @@ class PubMedFetcher(Fetcher):
         return pmc_ids
 
     def _fetch_metadata(self, pmc_id: str) -> Optional[PaperMetadata]:
-        """Fetches metadata and constructs a PaperMetadata object."""
         with Entrez.efetch(db="pmc", id=pmc_id, retmode="xml") as handle:
             xml_data = handle.read()
 
@@ -54,18 +52,45 @@ class PubMedFetcher(Fetcher):
 
         title = self._extract_title(root)
         authors = self._extract_authors(root)
-        pdf_url = self._construct_pdf_url(pmc_id)
 
-        if self.validate_pdf and not self._validate_pdf_url(pdf_url):
-            logger.info(f"No valid PDF found for PMC{pmc_id}; skipping.")
+        # Try to find PDF
+        pdf_url = self._extract_pdf_url_from_xml(root)
+        if pdf_url:
+            if not self.validate_pdf or self._validate_pdf_url(pdf_url):
+                return self._make_metadata(pmc_id, title, authors, pdf_url, "pdf")
+            else:
+                logger.info(f"Invalid PDF URL for PMC{pmc_id}, trying HTML instead.")
+
+        # Fallback to HTML
+        html_url = self._construct_html_url(pmc_id)
+        logger.info(
+            f"No PDF found for PMC{pmc_id}, using HTML link instead: {html_url}"
+        )
+
+        if not self.validate_pdf or self._validate_html_url(html_url):
+            return self._make_metadata(pmc_id, title, authors, html_url, "html")
+        else:
+            logger.info(f"Invalid HTML URL for PMC{pmc_id}, {html_url}; skipping.")
             return None
 
+    def _make_metadata(
+        self,
+        pmc_id: str,
+        title: str,
+        authors: List[str],
+        url: str,
+        format_type: str,
+    ) -> PaperMetadata:
         return PaperMetadata(
             id=pmc_id,
             title=title,
             authors=authors,
-            pdf_url=pdf_url,
-            metadata={"source": "PubMed", "pmc_id": pmc_id},
+            url=url,
+            format=format_type,
+            metadata={
+                "source": "pmc",
+                "pmc_id": pmc_id,
+            },
         )
 
     def _extract_title(self, root: ET.Element) -> str:
@@ -82,16 +107,53 @@ class PubMedFetcher(Fetcher):
                 authors.append(full_name)
         return authors
 
-    def _construct_pdf_url(self, pmc_id: str) -> str:
-        return f"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC{pmc_id}/pdf/"
+    def _extract_pdf_url_from_xml(self, root: ET.Element) -> Optional[str]:
+        ns = {"xlink": "http://www.w3.org/1999/xlink"}
+        for elem in root.findall(".//self-uri", namespaces=ns):
+            if elem.attrib.get("content-type") == "pdf":
+                href = elem.attrib.get("{http://www.w3.org/1999/xlink}href")
+                if href:
+                    if href.startswith("/"):
+                        return f"https://www.ncbi.nlm.nih.gov{href}"
+                    elif href.startswith("http"):
+                        return href
+        return None
+
+    def _construct_html_url(self, pmc_id: str) -> str:
+        return f"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC{pmc_id}/"
 
     def _validate_pdf_url(self, url: str) -> bool:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/122.0.0.0 Safari/537.36"
+        }
         try:
-            response = requests.head(url, allow_redirects=True, timeout=5)
-            return (
-                response.status_code == 200
-                and "application/pdf" in response.headers.get("Content-Type", "")
+            response = requests.get(url, headers=headers, stream=True, timeout=5)
+            content_type = response.headers.get("Content-Type", "").lower()
+            logger.debug(
+                f"GET {url} → {response.status_code}, Content-Type: {content_type}"
             )
+            return response.status_code == 200 and "pdf" in content_type
         except requests.RequestException as e:
             logger.warning(f"PDF validation failed for {url}: {e}")
+            return False
+
+    def _validate_html_url(self, url: str) -> bool:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/122.0.0.0 Safari/537.36"
+        }
+        try:
+            response = requests.get(url, headers=headers, stream=True, timeout=5)
+            logger.debug(
+                f"GET {url} → {response.status_code}, Content-Type: {response.headers.get('Content-Type')}"
+            )
+            return (
+                response.status_code == 200
+                and "html" in response.headers.get("Content-Type", "").lower()
+            )
+        except requests.RequestException as e:
+            logger.warning(f"HTML validation failed for {url}: {e}")
             return False
