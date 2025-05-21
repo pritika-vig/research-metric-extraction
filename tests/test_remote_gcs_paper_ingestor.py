@@ -4,7 +4,7 @@ import pytest
 
 from ingestors.remote_gcs_paper_ingestor import RemoteGCSPaperIngestor
 from models.document import Document
-from models.paper_metadata import PaperMetadata
+from models.paper_metadata import FetchedPaperMetadata
 
 EXPECTED_HEADERS = {
     "User-Agent": (
@@ -17,7 +17,7 @@ EXPECTED_HEADERS = {
 
 @pytest.fixture
 def sample_pdf_paper():
-    return PaperMetadata(
+    return FetchedPaperMetadata(
         id="1234.5678",
         title="A Deep Dive into Transformers",
         authors=["Alice Smith", "Bob Jones"],
@@ -29,7 +29,7 @@ def sample_pdf_paper():
 
 @pytest.fixture
 def sample_html_paper():
-    return PaperMetadata(
+    return FetchedPaperMetadata(
         id="4321.8765",
         title="HTML Interfaces for LLMs",
         authors=["Jane Roe"],
@@ -105,7 +105,7 @@ def test_ingest_html_upload(mock_storage_client, mock_requests_get, sample_html_
 @patch("ingestors.remote_gcs_paper_ingestor.storage.Client")
 def test_ingest_skips_missing_url(mock_storage_client, mock_requests_get):
     """Skips papers with no URL."""
-    paper = PaperMetadata(
+    paper = FetchedPaperMetadata(
         id="no-url",
         title="No Link Here",
         authors=[],

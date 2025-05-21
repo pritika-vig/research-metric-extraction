@@ -9,7 +9,7 @@ from google.cloud import storage
 from ingestors.ingestor import Ingestor
 from models.document import Document
 from models.gcs_metadata import GCSMetadata
-from models.paper_metadata import PaperMetadata
+from models.paper_metadata import FetchedPaperMetadata
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 class RemoteGCSPaperIngestor(Ingestor):
     """
-    Ingests academic papers (PDF or HTML) from a list of PaperMetadata objects.
+    Ingests academic papers (PDF or HTML) from a list of FetchedPaperMetadata objects.
 
     For each paper:
     - Downloads the document from the provided `url`
@@ -39,7 +39,7 @@ class RemoteGCSPaperIngestor(Ingestor):
         )
     }
 
-    def __init__(self, papers: List[PaperMetadata]):
+    def __init__(self, papers: List[FetchedPaperMetadata]):
         self.papers = papers
         self.bucket_name = os.getenv("GCS_BUCKET")
         self.project_id = os.getenv("GCP_PROJECT_ID")
@@ -79,7 +79,7 @@ class RemoteGCSPaperIngestor(Ingestor):
 
         return documents
 
-    def _handle_pdf(self, paper: PaperMetadata) -> Optional[Document]:
+    def _handle_pdf(self, paper: FetchedPaperMetadata) -> Optional[Document]:
         blob_name = self._make_blob_name(paper, extension="pdf")
         blob = self.gcs_client.bucket(self.bucket_name).blob(blob_name)
         gcs_uri = f"gs://{self.bucket_name}/{blob_name}"
@@ -104,10 +104,10 @@ class RemoteGCSPaperIngestor(Ingestor):
                 bucket_name=self.bucket_name,
                 format="pdf",
             ),
-            paper_metadata=paper,
+            fetched_paper_metadata=paper,
         )
 
-    def _handle_html(self, paper: PaperMetadata) -> Optional[Document]:
+    def _handle_html(self, paper: FetchedPaperMetadata) -> Optional[Document]:
         blob_name = self._make_blob_name(paper, extension="html")
         blob = self.gcs_client.bucket(self.bucket_name).blob(blob_name)
         gcs_uri = f"gs://{self.bucket_name}/{blob_name}"
@@ -130,10 +130,10 @@ class RemoteGCSPaperIngestor(Ingestor):
                 bucket_name=self.bucket_name,
                 format="html",
             ),
-            paper_metadata=paper,
+            fetched_paper_metadata=paper,
         )
 
-    def _make_blob_name(self, paper: PaperMetadata, extension: str) -> str:
+    def _make_blob_name(self, paper: FetchedPaperMetadata, extension: str) -> str:
         doi = paper.metadata.get("doi")
         if doi:
             base_name = doi.replace("/", "_")

@@ -9,7 +9,7 @@ from extractors.vertex_gemini_extractor import VertexGeminiExtractor
 from fetchers.pubmed_fetcher import PubMedFetcher
 from ingestors.remote_gcs_paper_ingestor import RemoteGCSPaperIngestor
 from models.extraction_config import ExtractionConfig
-from models.paper_metadata import PaperMetadata
+from models.paper_metadata import FetchedPaperMetadata
 from pipelines.pipeline import Pipeline
 
 # Set a cap on the number of PDFs processed per run
@@ -30,7 +30,7 @@ class PubMedPipeline(Pipeline):
         fetcher = PubMedFetcher(
             email=self.email, max_results=MAX_PAPERS, validate_pdf=True
         )
-        papers: List[PaperMetadata] = fetcher.fetch(self.query)
+        papers: List[FetchedPaperMetadata] = fetcher.fetch(self.query)
 
         # Step 2: Ingest to GCS
         ingestor = RemoteGCSPaperIngestor(papers=papers)
@@ -41,7 +41,7 @@ class PubMedPipeline(Pipeline):
         extractor = VertexGeminiExtractor()
 
         for doc in documents:
-            print("\n🔍 Extracting fields from:", doc.paper_metadata.title)
+            print("\n🔍 Extracting fields from:", doc.fetched_paper_metadata.title)
             extracted_data = extractor.extract(doc, config)
 
             for f in extracted_data.fields:
@@ -56,7 +56,7 @@ class PubMedPipeline(Pipeline):
             with open(output_path, "w", encoding="utf-8") as f:
                 json.dump(
                     {
-                        "paper_id": doc.paper_metadata.id,
+                        "paper_id": doc.fetched_paper_metadata.id,
                         "source_pdf": doc.gcs_metadata.gcs_uri,
                         "fields": [asdict(field) for field in extracted_data.fields],
                     },

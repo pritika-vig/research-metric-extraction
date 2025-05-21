@@ -4,7 +4,7 @@ from typing import Any, Dict, List
 
 # Metadata model for found papers
 @dataclass
-class PaperMetadata:
+class FetchedPaperMetadata:
     id: str
     title: str
     authors: List[str]

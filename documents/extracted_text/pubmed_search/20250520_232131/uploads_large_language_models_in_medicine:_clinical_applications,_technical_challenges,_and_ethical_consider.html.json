@@ -1,0 +1,230 @@
+{
+  "paper_id": "12086438",
+  "source_pdf": "gs://patient-engagement-pipeline-bucket/uploads/large_language_models_in_medicine:_clinical_applications,_technical_challenges,_and_ethical_consider.html",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Large Language Models in Medicine: Clinical Applications, Technical Challenges, and Ethical Considerations",
+      "evidence_quote": "\"Large Language Models in Medicine: Clinical Applications, Technical Challenges, and Ethical Considerations\"",
+      "page_number": 1
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Kyu-Hwan Jung",
+      "evidence_quote": "\"Kyu-Hwan Jung\"",
+      "page_number": 1
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "Healthcare Informatics Research",
+      "evidence_quote": "\"Healthc Inform Res\"",
+      "page_number": 1
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Peer-reviewed",
+      "evidence_quote": "\"A literature survey of peer-reviewed articles, technical reports, and expert commentary from relevant medical and artificial intelligence journals was conducted.\"",
+      "page_number": 2
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "2025 Apr 30",
+      "evidence_quote": "\"2025 Apr 30\"",
+      "page_number": 1
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Medical Informatics",
+      "evidence_quote": "\"Medical Informatics Applications\"",
+      "page_number": 2
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "Korea",
+      "evidence_quote": "\"Sungkyunkwan University, Seoul, Korea\"",
+      "page_number": 1
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Review",
+      "evidence_quote": "\"This study presents a comprehensive review of the clinical applications, technical challenges, and ethical considerations associated with using large language models (LLMs) in medicine.\"",
+      "page_number": 2
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To review the clinical applications, technical challenges, and ethical considerations of large language models (LLMs) in medicine.",
+      "evidence_quote": "\"This study presents a comprehensive review of the clinical applications, technical challenges, and ethical considerations associated with using large language models (LLMs) in medicine.\"",
+      "page_number": 2
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "LLMs have potential in clinical documentation, decision support, and patient communication, but face technical and ethical challenges requiring rigorous research and guidelines.",
+      "evidence_quote": "\"LLMs possess transformative potential for clinical medicine, particularly by augmenting clinician capabilities. However, substantial technical and ethical hurdles necessitate rigorous research, validation, clearly defined guidelines, and human oversight.\"",
+      "page_number": 2
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "Yes",
+      "evidence_quote": "\"LLMs\u2019 natural language processing abilities offer potential improvements in clinician-patient communication and patient access to, understanding of, and dissemination of health information.\"",
+      "page_number": 5
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "Information",
+      "evidence_quote": "\"Simplifying medical jargon/documents (e.g., trial info, discharge summaries); Patient Q&A chatbots; Health literacy tools.\"",
+      "page_number": 5
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "Design: None, Development: None, Evaluation: Consultation, Implementation: Information",
+      "evidence_quote": "\"LLMs can translate complex medical terminology (e.g., informed consent documents) [30, 31], research findings (e.g., clinical trial summaries) [32], or clinical reports (e.g., discharge summaries) [6, 33] into straightforward language that patients can easily comprehend.\"",
+      "page_number": 5
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "Yes",
+      "evidence_quote": "\"Virtual assistants or chatbots powered by LLMs can respond to patient inquiries regarding health conditions or treatments, offering preliminary information and guidance [34]. Remarkably, LLMs can deliver responses with a significant degree of empathy, even being perceived by patients as more empathetic than human clinicians in certain written communications [22, 35].\"",
+      "page_number": 5
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "Comparative studies of LLM outputs vs. human clinicians",
+      "evidence_quote": "\"LLMs can deliver responses with a significant degree of empathy, even being perceived by patients as more empathetic than human clinicians in certain written communications [22, 35].\"",
+      "page_number": 5
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "Improved patient understanding and engagement with health information.",
+      "evidence_quote": "\"This application has significant potential to enhance patient understanding and promote effective shared decision-making.\"",
+      "page_number": 5
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "LLMs are being explored for simplifying medical information and providing patient question answering.",
+      "evidence_quote": "\"Virtual assistants or chatbots powered by LLMs can respond to patient inquiries regarding health conditions or treatments, offering preliminary information and guidance [34].\"",
+      "page_number": 5
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "Empathetic responses in chatbots.",
+      "evidence_quote": "\"Remarkably, LLMs can deliver responses with a significant degree of empathy, even being perceived by patients as more empathetic than human clinicians in certain written communications [22, 35].\"",
+      "page_number": 5
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "Studies evaluating the empathy and utility of LLM-based chatbots.",
+      "evidence_quote": "\"Studies on chatbot empathy/utility [22].\"",
+      "page_number": 4
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "LLMs provide simplified medical information to patients.",
+      "evidence_quote": "\"LLMs can translate complex medical terminology (e.g., informed consent documents) [30, 31], research findings (e.g., clinical trial summaries) [32], or clinical reports (e.g., discharge summaries) [6, 33] into straightforward language that patients can easily comprehend.\"",
+      "page_number": 5
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "Yes, the study mentions the risk of algorithmic bias and the need for diverse training data.",
+      "evidence_quote": "\"A major ethical concern is that LLMs trained on datasets reflecting existing societal inequities may amplify biases in healthcare delivery [36].\"",
+      "page_number": 7
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "Yes, the study discusses data privacy, patient safety, and accountability.",
+      "evidence_quote": "\"Ethical data sourcing, patient privacy, data security, and obtaining valid informed consent for data use are critical concerns.\"",
+      "page_number": 8
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "Integration with existing EHRs and clinical workflows is a significant technical challenge.",
+      "evidence_quote": "\"Successful implementation of LLMs depends heavily on seamless integration with existing clinical workflows and healthcare IT infrastructures, particularly EHRs [11].\"",
+      "page_number": 7
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    }
+  ]
+}

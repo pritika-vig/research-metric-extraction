@@ -1,0 +1,230 @@
+{
+  "paper_id": "12088715",
+  "source_pdf": "gs://patient-engagement-pipeline-bucket/uploads/the_environmental_impact_of_telemonitoring_vs._on-site_cardiac_follow-up:_a_mixed-method_study.html",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "The environmental impact of telemonitoring vs. on-site cardiac follow-up: a mixed-method study",
+      "evidence_quote": "The environmental impact of telemonitoring vs. on-site cardiac follow-up: a mixed-method study",
+      "page_number": 1
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Egid M van Bree, Lynn E Snijder, Sophie ter Haak, Douwe E Atsma, Evelyn A Brakema",
+      "evidence_quote": "Egid M van Bree, Lynn E Snijder, Sophie ter Haak, Douwe E Atsma, Evelyn A Brakema",
+      "page_number": 2
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "European Heart Journal. Digital Health",
+      "evidence_quote": "Eur Heart J Digit Health",
+      "page_number": 2
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Peer-reviewed",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "2025 Feb 26",
+      "evidence_quote": "2025 Feb 26",
+      "page_number": 2
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Cardiology, Digital Health, Environmental Health",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "Netherlands",
+      "evidence_quote": "We studied the environmental impact of resource use per patient for 1-year post-MI follow-up in a Dutch academic hospital",
+      "page_number": 3
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Original Research",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To compare the environmental impact of post-MI follow-up as care on site (CoS) alone and follow-up that included telemonitoring; and to explore how telemonitoring\u2019s environmental impact influences patients\u2019 and HPs\u2019 perceptions of its use in follow-up post-MI and post-catheter ablation (CA).",
+      "evidence_quote": "Given these gaps in the literature, the aim of this study was twofold: to compare the environmental impact of post-MI follow-up as care on site (CoS) alone and follow-up that included telemonitoring; and to explore how telemonitoring\u2019s environmental impact influences patients\u2019 and HPs\u2019 perceptions of its use in follow-up post-MI and post-catheter ablation (CA).",
+      "page_number": 4
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "Telemonitoring had a substantially bigger environmental impact than CoS in the studied setting. Patient commute distance, reuse of devices, and tailored use of devices should be considered when implementing telemonitoring for clinical follow-up. Patients and HPs supported these solutions to enhance sustainability-informed cardiovascular care as the default option.",
+      "evidence_quote": "Telemonitoring had a substantially bigger environmental impact than CoS in the studied setting. Patient commute distance, reuse of devices, and tailored use of devices should be considered when implementing telemonitoring for clinical follow-up. Patients and HPs supported these solutions to enhance sustainability-informed cardiovascular care as the default option.",
+      "page_number": 4
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "Yes",
+      "evidence_quote": "We conducted a mixed-method study; a standardized life cycle assessment, and qualitative interviews and focus groups.",
+      "page_number": 4
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "Consultation - qualitative interviews and focus groups to explore perceptions of telemonitoring's environmental impact",
+      "evidence_quote": "We conducted a mixed-method study; a standardized life cycle assessment, and qualitative interviews and focus groups among cardiology patients and HPs using telemonitoring.",
+      "page_number": 4
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "Design: None, Development: None, Evaluation: Consultation, Implementation: Consultation",
+      "evidence_quote": "We conducted a mixed-method study; a standardized life cycle assessment, and qualitative interviews and focus groups among cardiology patients and HPs using telemonitoring.",
+      "page_number": 4
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "Yes",
+      "evidence_quote": "We uncovered that post-MI telemonitoring follow-up had a substantially larger environmental impact than CoS in the studied setting, including global warming (+480%) and mineral/metal resource use (+4390%). Telemonitoring device reuse and tailored use substantially reduced its environmental impact.",
+      "page_number": 14
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "Qualitative analysis of interview and focus group data",
+      "evidence_quote": "Qualitative data were analysed using Thematic Analysis.",
+      "page_number": 3
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "Identified patient and healthcare professional perspectives on the acceptability and feasibility of strategies to reduce the environmental impact of telemonitoring, such as device reuse and tailored use.",
+      "evidence_quote": "Both HPs and patients suggested reuse and more tailored use of devices based on individual patient characteristics to be acceptable and feasible",
+      "page_number": 13
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "Identified that patients and HPs were generally positive towards sustainable healthcare and were willing to use telemonitoring more sustainably, suggesting a potential avenue for implementation strategies.",
+      "evidence_quote": "However, patients and HPs were generally positive towards sustainable healthcare and were willing to use telemonitoring more sustainably.",
+      "page_number": 4
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "Information was provided to patients via a one-page invitation letter containing a link and QR-code to the survey.",
+      "evidence_quote": "Patients in post-MI or post-CA follow-up were recruited via a one-page invitation letter containing a link and QR-code to the survey, distributed by patient-facing technical support staff upon device distribution and by nurse practitioners during outpatient visits.",
+      "page_number": 7
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "Consultation occurred through semi-structured interviews and focus groups with patients and healthcare professionals.",
+      "evidence_quote": "We performed interviews and focus groups between September 2023 and January 2024. Conversations were semi-structured, using a predefined topic list including Theoretical Domains Framework (TDF) constructs to probe for barriers and facilitators to explicitly discuss environmental impact when considering telemonitoring",
+      "page_number": 7
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "The study acknowledged that telemonitoring might be unsuitable for people with lower digital literacy.",
+      "evidence_quote": "Both HPs and patients mentioned that telemonitoring might be unsuitable for people with lower digital literacy, yet expected this number to be limited.",
+      "page_number": 12
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "Ethical approval was waived by the authorized hospital review committee.",
+      "evidence_quote": "Ethical approval was waived by the authorized hospital review committee (file number:24\u2013033).",
+      "page_number": 4
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "The study was conducted in a real-world clinical setting at an academic hospital.",
+      "evidence_quote": "Data were collected between March 2023 and January 2024 at the cardiology department of the Leiden University Medical Center, an academic hospital in the Netherlands.",
+      "page_number": 4
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "Intermediate findings from interviews were used as input for follow-up questions in later interviews.",
+      "evidence_quote": "Intermediate findings were used as input for follow-up questions in later interviews.",
+      "page_number": 8
+    }
+  ]
+}

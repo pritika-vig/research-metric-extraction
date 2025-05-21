@@ -6,7 +6,7 @@ import requests
 from Bio import Entrez
 
 from fetchers.fetcher import Fetcher
-from models.paper_metadata import PaperMetadata
+from models.paper_metadata import FetchedPaperMetadata
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
@@ -18,7 +18,7 @@ class PubMedFetcher(Fetcher):
         self.max_results = max_results
         self.validate_pdf = validate_pdf
 
-    def fetch(self, query: str) -> List[PaperMetadata]:
+    def fetch(self, query: str) -> List[FetchedPaperMetadata]:
         try:
             pmc_ids = self._search_pmc(query)
         except Exception as e:
@@ -44,7 +44,7 @@ class PubMedFetcher(Fetcher):
         logger.info(f"Found {len(pmc_ids)} results")
         return pmc_ids
 
-    def _fetch_metadata(self, pmc_id: str) -> Optional[PaperMetadata]:
+    def _fetch_metadata(self, pmc_id: str) -> Optional[FetchedPaperMetadata]:
         with Entrez.efetch(db="pmc", id=pmc_id, retmode="xml") as handle:
             xml_data = handle.read()
 
@@ -80,8 +80,8 @@ class PubMedFetcher(Fetcher):
         authors: List[str],
         url: str,
         format_type: str,
-    ) -> PaperMetadata:
-        return PaperMetadata(
+    ) -> FetchedPaperMetadata:
+        return FetchedPaperMetadata(
             id=pmc_id,
             title=title,
             authors=authors,

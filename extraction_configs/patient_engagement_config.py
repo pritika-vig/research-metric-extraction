@@ -51,15 +51,24 @@ def build_patient_engagement_config() -> ExtractionConfig:
             ExtractionFieldSpec(
                 "Patient/Public Engagement (Y/N)",
                 (
-                    "Does the study report any involvement of patients or the public? This includes participation, "
-                    "feedback, consultation, or co-design."
+                    "Does the study report any meaningful or intentional involvement of patients or the public "
+                    "in any phase of the research or implementation?"
                 ),
             ),
             ExtractionFieldSpec(
                 "Type of Engagement (Montreal Model continuum)",
                 (
-                    "Categorize engagement based on the Montreal Model: Information, Consultation, "
-                    "Collaboration, or Partnership."
+                    "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), "
+                    "Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), "
+                    "or Partnership (e.g., decision-making roles, advisory boards)."
+                ),
+            ),
+            ExtractionFieldSpec(
+                "Level of Patient Involvement (Montreal Model)",
+                (
+                    "At what level were patients or the public involved across the research lifecycle? "
+                    "Score each phase (design, development, evaluation, implementation) as: None, Information, "
+                    "Consultation, Collaboration, or Partnership."
                 ),
             ),
             ExtractionFieldSpec(
@@ -134,6 +143,35 @@ def build_patient_engagement_config() -> ExtractionConfig:
                     "Were patients/public involved across all stages with formal roles "
                     "(e.g., co-authors, advisory board, project governance)?"
                 ),
+            ),
+            ExtractionFieldSpec(
+                "Equity or Inclusivity Considerations",
+                "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+            ),
+            ExtractionFieldSpec(
+                "Ethical, Legal, and Social Implications (ELSI)",
+                (
+                    "Did the study address privacy, informed consent, data ethics, or cultural relevance "
+                    "in its engagement or implementation approach?"
+                ),
+            ),
+            ExtractionFieldSpec(
+                "Technology Complexity / Integration Readiness",
+                (
+                    "Did the study evaluate how complex the technology was or how well it integrated with "
+                    "existing clinical or community workflows?"
+                ),
+            ),
+            ExtractionFieldSpec(
+                "Real-World Evaluation or Deployment",
+                (
+                    "Was the technology evaluated or deployed in "
+                    "real-world settings beyond pilot studies or lab prototypes?"
+                ),
+            ),
+            ExtractionFieldSpec(
+                "Feedback and Iterative Adaptation",
+                "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
             ),
         ],
     )
