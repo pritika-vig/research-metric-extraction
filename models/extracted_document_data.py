@@ -1,6 +1,6 @@
 # models/extracted_document_data.py
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import List, Optional
 
 from models.paper_id import PaperId
@@ -15,25 +15,18 @@ class ExtractedField:
     page_number: Optional[int] = None
 
 
+@dataclass
 class ExtractedDocumentData:
-    def __init__(
-        self,
-        paper_id: PaperId,
-        paper_title: str,
-        paper_gc_uri: str,
-        source_url: str,
-        fields: List[ExtractedField],
-    ):
-        self.paper_id = paper_id
-        self.paper_title = paper_title
-        self.paper_gc_uri = paper_gc_uri
-        self.source_url = source_url  # Url if pulled from web, path if pulled locally.
-        self.fields = fields
+    paper_id: PaperId
+    paper_title: str
+    paper_gc_uri: str
+    source_url: str
+    fields: List[ExtractedField] = field(default_factory=list)
 
     def get_field_value(self, field_name: str) -> Optional[str]:
-        for field in self.fields:
-            if field.name == field_name:
-                return field.value
+        for f in self.fields:
+            if f.name == field_name:
+                return f.value
         return None
 
     def get_paper_id(self) -> Optional[str]:

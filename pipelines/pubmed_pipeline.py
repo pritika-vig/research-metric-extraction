@@ -1,5 +1,3 @@
-import json
-from dataclasses import asdict
 from datetime import datetime
 from pathlib import Path
 from typing import List
@@ -11,8 +9,9 @@ from ingestors.remote_gcs_paper_ingestor import RemoteGCSPaperIngestor
 from models.extraction_config import ExtractionConfig
 from models.paper_metadata import FetchedPaperMetadata
 from pipelines.pipeline import Pipeline
+from writers.local_file_writer import LocalFileWriter
 
-MAX_PAPERS = 20  # or whatever default you use
+MAX_PAPERS = 1  # or whatever default you use
 
 
 class PubMedPipeline(Pipeline):
@@ -44,22 +43,8 @@ class PubMedPipeline(Pipeline):
         extractor = VertexGeminiExtractor()
         extracted_data_list = extractor.extract(documents, config)
 
-        # Step 4: Save extracted results
-        for extracted_data in extracted_data_list:
-            safe_stem = extracted_data.get_paper_id()
-            output_path = output_dir / f"{safe_stem}.json"
-
-            with open(output_path, "w", encoding="utf-8") as f:
-                json.dump(
-                    {
-                        "paper_id": extracted_data.get_paper_id(),
-                        "title": extracted_data.paper_title,
-                        "source_pdf": extracted_data.paper_gc_uri,
-                        "source_url": extracted_data.source_url,
-                        "fields": [asdict(field) for field in extracted_data.fields],
-                    },
-                    f,
-                    indent=2,
-                )
-
-            print(f"\nSaved extracted data to: {output_path}\n")
+        # Step 4: Save extracted results to documents/extracted_text/pubmed_search + run timestamp
+        writer = LocalFileWriter(
+            base_output_dir="documents/extracted_text/pubmed_search"
+        )
+        writer.write(extracted_data_list)
