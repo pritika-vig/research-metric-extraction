@@ -1,5 +1,3 @@
-# extractors/vertex_gemini_extractor.py
-
 import logging
 import os
 from typing import List
@@ -26,6 +24,18 @@ class VertexGeminiExtractor(Extractor):
         self.model = GenerativeModel("gemini-2.0-flash")
 
     def extract(
+        self, documents: List[Document], config: ExtractionConfig
+    ) -> List[ExtractedDocumentData]:
+        results = []
+        for document in documents:
+            try:
+                result = self._extract_single(document, config)
+                results.append(result)
+            except Exception as e:
+                logger.warning(f"Extraction failed for {document}: {e}")
+        return results
+
+    def _extract_single(
         self, document: Document, config: ExtractionConfig
     ) -> ExtractedDocumentData:
         if not document.gcs_metadata:
@@ -56,12 +66,9 @@ class VertexGeminiExtractor(Extractor):
             },
         )
         response_text = result.text.strip()
-        logger.info(f"Gemini raw response:\n{response_text}")
+        logger.info(f"Gemini raw response for {gcs_uri}:\n{response_text}")
         fields = self._parse_response(response_text, config)
-        return self._build_extracted_document_data(
-            document=document,
-            fields=fields,
-        )
+        return self._build_extracted_document_data(document, fields)
 
     def _build_prompt(self, config: ExtractionConfig) -> str:
         field_defs = "\n".join(

@@ -12,8 +12,7 @@ from models.extraction_config import ExtractionConfig
 from models.paper_metadata import FetchedPaperMetadata
 from pipelines.pipeline import Pipeline
 
-# Set a cap on the number of PDFs processed per run
-MAX_PAPERS = 10
+MAX_PAPERS = 20  # or whatever default you use
 
 
 class PubMedPipeline(Pipeline):
@@ -36,14 +35,17 @@ class PubMedPipeline(Pipeline):
         ingestor = RemoteGCSPaperIngestor(papers=papers)
         documents = ingestor.ingest()
 
-        # Step 3: Extract content
+        if not documents:
+            print("No documents ingested. Exiting pipeline.")
+            return
+
+        # Step 3: Extract content in batch
         config: ExtractionConfig = build_patient_engagement_config()
         extractor = VertexGeminiExtractor()
+        extracted_data_list = extractor.extract(documents, config)
 
-        for doc in documents:
-            extracted_data = extractor.extract(doc, config)
-
-            # Step 4: Save extracted results
+        # Step 4: Save extracted results
+        for extracted_data in extracted_data_list:
             safe_stem = extracted_data.get_paper_id()
             output_path = output_dir / f"{safe_stem}.json"
 

@@ -1,9 +1,5 @@
-# tests/test_vertex_gemini_extractor.py
-
 from pathlib import Path
 from unittest.mock import MagicMock
-
-import pytest
 
 from extractors.vertex_gemini_extractor import VertexGeminiExtractor
 from models.document import Document
@@ -13,8 +9,6 @@ from models.gcs_metadata import GCSMetadata
 from models.paper_id import PaperId
 
 
-# Test that well-formed Gemini responses are parsed correctly
-# into ExtractedField objects
 def test_extract_parses_mock_response_correctly():
     mock_response = (
         "Title:\n"
@@ -65,7 +59,7 @@ def test_extract_parses_mock_response_correctly():
     mock_result.text = mock_response
     extractor.model.generate_content = MagicMock(return_value=mock_result)
 
-    extracted = extractor.extract(document, config)
+    extracted = extractor.extract([document], config)[0]
 
     assert extracted.get_paper_id() == document.paper_id.get_canonical_id()
     assert len(extracted.fields) == 4
@@ -79,8 +73,6 @@ def test_extract_parses_mock_response_correctly():
     assert title_field.page_number == 1
 
 
-# Test that missing fields in the Gemini response are
-# handled gracefully with None/defaults
 def test_extract_handles_missing_fields_gracefully():
     mock_response = (
         "Title:\n"
@@ -113,13 +105,13 @@ def test_extract_handles_missing_fields_gracefully():
     mock_result.text = mock_response
     extractor.model.generate_content = MagicMock(return_value=mock_result)
 
-    extracted = extractor.extract(document, config)
+    extracted = extractor.extract([document], config)[0]
 
     title_field = next(f for f in extracted.fields if f.name == "Title")
     patient_field = next(f for f in extracted.fields if f.name == "Patient Co-authors")
 
     assert title_field.value == "Only this field is here"
-    assert title_field.evidence_quote == "N/A" or title_field.evidence_quote is None
+    assert title_field.evidence_quote in ["N/A", None]
     assert title_field.page_number is None
 
     assert patient_field.value is None
@@ -127,8 +119,6 @@ def test_extract_handles_missing_fields_gracefully():
     assert patient_field.page_number is None
 
 
-# Test that malformed output (no colons or structured format)
-# results in empty values but no crash
 def test_extract_handles_malformed_text():
     mock_response = (
         "This document contains a paragraph, not fields.\n"
@@ -159,14 +149,12 @@ def test_extract_handles_malformed_text():
     mock_result.text = mock_response
     extractor.model.generate_content = MagicMock(return_value=mock_result)
 
-    extracted = extractor.extract(document, config)
+    extracted = extractor.extract([document], config)[0]
 
     assert extracted.get_field_value("Title") is None
     assert extracted.get_field_value("Patient Co-authors") is None
 
 
-# Test that an empty string response from Gemini is handled safely
-# with all fields set to None
 def test_extract_handles_empty_response():
     config = ExtractionConfig(
         name="Test Empty Response",
@@ -191,7 +179,7 @@ def test_extract_handles_empty_response():
     mock_result.text = ""
     extractor.model.generate_content = MagicMock(return_value=mock_result)
 
-    extracted = extractor.extract(document, config)
+    extracted = extractor.extract([document], config)[0]
 
     assert extracted.get_field_value("Title") is None
 
@@ -227,11 +215,11 @@ def test_extract_handles_missing_evidence_and_page():
     mock_result.text = mock_response
     extractor.model.generate_content = MagicMock(return_value=mock_result)
 
-    extracted = extractor.extract(document, config)
+    extracted = extractor.extract([document], config)[0]
 
     field = extracted.fields[0]
     assert field.value == "AI for Health"
-    assert field.evidence_quote == "N/A" or field.evidence_quote is None
+    assert field.evidence_quote in ["N/A", None]
     assert field.page_number is None
 
 
@@ -266,17 +254,15 @@ def test_extract_handles_html_document():
     mock_result.text = mock_response
     extractor.model.generate_content = MagicMock(return_value=mock_result)
 
-    extracted = extractor.extract(document, config)
+    extracted = extractor.extract([document], config)[0]
 
     assert extracted.get_field_value("Title") == "HTML Document Test"
 
 
-def test_extract_raises_on_unsupported_format():
+def test_extract_handles_unsupported_format_gracefully(caplog):
     config = ExtractionConfig(
         name="Unsupported Format",
-        fields=[
-            ExtractionFieldSpec("Title", "Study title"),
-        ],
+        fields=[ExtractionFieldSpec("Title", "Study title")],
     )
 
     document = Document(
@@ -286,11 +272,129 @@ def test_extract_raises_on_unsupported_format():
             blob_name="fake.txt",
             bucket_name="fake",
             source_url="https://example.com/fake.txt",
-            format="txt",
+            format="txt",  # Unsupported
         ),
     )
 
     extractor = VertexGeminiExtractor()
 
-    with pytest.raises(ValueError, match="Unsupported file format"):
-        extractor.extract(document, config)
+    with caplog.at_level("WARNING"):
+        results = extractor.extract([document], config)
+
+    assert results == []
+    assert any("Unsupported file format" in record.message for record in caplog.records)
+
+
+def test_batch_extract_with_partial_failure(caplog):
+    mock_response = (
+        "Title:\n"
+        "  value: Clean Paper\n"
+        '  evidence_quote: "This is a clean paper."\n'
+        "  page_number: 1\n"
+    )
+
+    config = ExtractionConfig(
+        name="Batch Test",
+        fields=[ExtractionFieldSpec("Title", "Study title")],
+    )
+
+    good_document = Document(
+        file_path=Path("tests/good.pdf"),
+        gcs_metadata=GCSMetadata(
+            gcs_uri="gs://bucket/good.pdf",
+            blob_name="good.pdf",
+            bucket_name="bucket",
+            source_url="https://example.com/good.pdf",
+            format="pdf",
+        ),
+    )
+
+    bad_document = Document(
+        file_path=Path("tests/bad.txt"),
+        gcs_metadata=GCSMetadata(
+            gcs_uri="gs://bucket/bad.txt",
+            blob_name="bad.txt",
+            bucket_name="bucket",
+            source_url="https://example.com/bad.txt",
+            format="txt",  # Unsupported
+        ),
+    )
+
+    extractor = VertexGeminiExtractor()
+
+    # Mock only the good document's response
+    mock_result = MagicMock()
+    mock_result.text = mock_response
+    extractor.model.generate_content = MagicMock(return_value=mock_result)
+
+    with caplog.at_level("WARNING"):
+        results = extractor.extract([good_document, bad_document], config)
+
+    assert len(results) == 1
+    assert results[0].get_field_value("Title") == "Clean Paper"
+
+    # Ensure error was logged for bad document
+    assert any("Unsupported file format" in record.message for record in caplog.records)
+
+
+def test_batch_extract_with_one_network_failure(caplog):
+    mock_response = (
+        "Title:\n"
+        "  value: Good Paper Title\n"
+        '  evidence_quote: "The title is Good Paper Title."\n'
+        "  page_number: 1\n"
+    )
+
+    config = ExtractionConfig(
+        name="Partial Failure Test",
+        fields=[
+            ExtractionFieldSpec("Title", "Study title"),
+        ],
+    )
+
+    good_document = Document(
+        file_path=Path("tests/good_network.pdf"),
+        gcs_metadata=GCSMetadata(
+            gcs_uri="gs://bucket/good_network.pdf",
+            blob_name="good_network.pdf",
+            bucket_name="bucket",
+            source_url="https://example.com/good_network.pdf",
+            format="pdf",
+        ),
+    )
+
+    failing_document = Document(
+        file_path=Path("tests/bad_network.pdf"),
+        gcs_metadata=GCSMetadata(
+            gcs_uri="gs://bucket/bad_network.pdf",
+            blob_name="bad_network.pdf",
+            bucket_name="bucket",
+            source_url="https://example.com/bad_network.pdf",
+            format="pdf",
+        ),
+    )
+
+    extractor = VertexGeminiExtractor()
+
+    # Configure mock: good doc returns a response, bad doc raises a network error
+    def mock_generate_content(parts, generation_config):
+        uri_str = str(parts[1])
+        if "good_network.pdf" in uri_str:
+            mock_result = MagicMock()
+            mock_result.text = mock_response
+            return mock_result
+        else:
+            raise RuntimeError("Simulated network failure")
+
+    extractor.model.generate_content = MagicMock(side_effect=mock_generate_content)
+
+    with caplog.at_level("WARNING"):
+        results = extractor.extract([good_document, failing_document], config)
+
+    # Only one result (for the good doc)
+    assert len(results) == 1
+    assert results[0].get_field_value("Title") == "Good Paper Title"
+
+    # Confirm the network error was logged
+    assert any("Simulated network failure" in r.message for r in caplog.records)
+    assert any("bad_network.pdf" in r.message for r in caplog.records)
