@@ -6,6 +6,7 @@ import requests
 from Bio import Entrez
 
 from fetchers.fetcher import Fetcher
+from models.paper_id import PaperId
 from models.paper_metadata import FetchedPaperMetadata
 
 logger = logging.getLogger(__name__)
@@ -81,8 +82,9 @@ class PubMedFetcher(Fetcher):
         url: str,
         format_type: str,
     ) -> FetchedPaperMetadata:
+        paper_id = PaperId(pmcid=pmc_id)
         return FetchedPaperMetadata(
-            id=pmc_id,
+            paper_id=paper_id,
             title=title,
             authors=authors,
             url=url,

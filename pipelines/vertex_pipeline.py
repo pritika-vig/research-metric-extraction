@@ -25,25 +25,24 @@ class VertexPipeline(Pipeline):
         documents = ingestor.ingest()
 
         for doc in documents:
-            print(f"🔍 Extracting fields from: {doc.file_path.name}")
             extracted_data = extractor.extract(doc, config)
             print(
-                f"✅ Extracted {len(extracted_data.fields)} fields from: {doc.file_path.name}"
+                f"Extracted {len(extracted_data.fields)} fields from: {extracted_data.get_paper_id()}"
             )
             for f in extracted_data.fields:
                 print(
                     f"  - {f.name}: {f.value} \n {f.evidence_quote} (Page {f.page_number})"
                 )
 
-            output_path = output_dir / f"{doc.file_path.stem}.json"
+            output_path = output_dir / f"{extracted_data.get_paper_id()}.json"
             with open(output_path, "w", encoding="utf-8") as f:
                 json.dump(
                     {
-                        "source_file": str(doc.file_path),
+                        "document_id": str(extracted_data.get_paper_id()),
                         "fields": [asdict(field) for field in extracted_data.fields],
                     },
                     f,
                     indent=2,
                 )
 
-            print(f"✅ Saved extracted data to: {output_path}")
+            print(f"Saved extracted data to: {output_path}")

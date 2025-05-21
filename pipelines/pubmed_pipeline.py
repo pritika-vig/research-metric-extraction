@@ -41,23 +41,19 @@ class PubMedPipeline(Pipeline):
         extractor = VertexGeminiExtractor()
 
         for doc in documents:
-            print("\n🔍 Extracting fields from:", doc.fetched_paper_metadata.title)
             extracted_data = extractor.extract(doc, config)
 
-            for f in extracted_data.fields:
-                print(
-                    f"  - {f.name}: {f.value} \n    {f.evidence_quote} (Page {f.page_number})"
-                )
-
             # Step 4: Save extracted results
-            safe_stem = doc.gcs_metadata.blob_name.replace("/", "_").replace(".pdf", "")
+            safe_stem = extracted_data.get_paper_id()
             output_path = output_dir / f"{safe_stem}.json"
 
             with open(output_path, "w", encoding="utf-8") as f:
                 json.dump(
                     {
-                        "paper_id": doc.fetched_paper_metadata.id,
-                        "source_pdf": doc.gcs_metadata.gcs_uri,
+                        "paper_id": extracted_data.get_paper_id(),
+                        "title": extracted_data.paper_title,
+                        "source_pdf": extracted_data.paper_gc_uri,
+                        "source_url": extracted_data.source_url,
                         "fields": [asdict(field) for field in extracted_data.fields],
                     },
                     f,

@@ -52,6 +52,7 @@ class VertexGcsPDFIngestor(Ingestor):
                 gcs_uri=gcs_uri,
                 blob_name=blob_name,
                 bucket_name=self.bucket_name,
+                source_url=pdf_file.name,
                 format="pdf",
             )
 

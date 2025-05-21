@@ -1,0 +1,232 @@
+{
+  "paper_id": "12088612",
+  "title": "uploads/impact_of_a_\u201cdigital_health\u201d_curriculum_on_students\u2019_perception_about_competence_and_relevance_of_di.html",
+  "source_pdf": "gs://patient-engagement-pipeline-bucket/uploads/impact_of_a_\u201cdigital_health\u201d_curriculum_on_students\u2019_perception_about_competence_and_relevance_of_di.html",
+  "source_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12088612/",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Impact of a \u201cDigital Health\u201d Curriculum on Students\u2019 Perception About Competence and Relevance of Digital Health Topics for Future Professional Challenges: Prospective Pilot Study",
+      "evidence_quote": "\"Impact of a \u201cDigital Health\u201d Curriculum on Students\u2019 Perception About Competence and Relevance of Digital Health Topics for Future Professional Challenges: Prospective Pilot Study\"",
+      "page_number": null
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Juliane Kr\u00f6plin, Leonie Maier, Jan-Hendrik Lenz, Bernd Romeike",
+      "evidence_quote": "\"Juliane Kr\u00f6plin, Leonie Maier, Jan-Hendrik Lenz, Bernd Romeike\"",
+      "page_number": null
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "JMIR Formative Research",
+      "evidence_quote": "\"JMIR Form Res\"",
+      "page_number": null
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Peer-reviewed",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "2025 May 12",
+      "evidence_quote": "\"2025 May 12\"",
+      "page_number": null
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Medical Education, Digital Health",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "Germany",
+      "evidence_quote": "\"The \u201cDigital Health\u201d curriculum was introduced at a German university\"",
+      "page_number": 3
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Original Research",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To analyze the impact of a digital health curriculum on students' perceived relevance and competence regarding digital health topics, and to analyze the acceptance and suitability of a gamification-based teaching method.",
+      "evidence_quote": "\"The study aims: (1) to analyze the impact of a transdisciplinary digital health curriculum on students\u2019 perceived relevance and competence regarding digital health topics and (2) to analyze the acceptance and suitability of a gamification-based teaching method integrated into the existing curriculum.\"",
+      "page_number": 4
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "The \"Digital Health\" curriculum improved students' perceived competence in digital health topics, particularly robotics. Gamification-based teaching methods were well-received. Data protection and information security were considered the most relevant topics.",
+      "evidence_quote": "\"The results highlight the potential to integrate more innovative teaching techniques, such as gamification, augmented reality, virtual reality, and simulation training, into a technologically advanced health care environment. Finally, the overarching importance of artificial intelligence and digital health applications signals the need to further integrate them, given their potential in remote and personalized medicine.\"",
+      "page_number": 3
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "Consultation - Students provided feedback on the curriculum's relevance and competence acquisition.",
+      "evidence_quote": "\"This was intended to evaluate when and how the opinions and subjective experiences of medical students can be optimally incorporated and integrated into the development of an effective curriculum.\"",
+      "page_number": 4
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "Design: None, Development: None, Evaluation: Consultation, Implementation: None",
+      "evidence_quote": "\"This was intended to evaluate when and how the opinions and subjective experiences of medical students can be optimally incorporated and integrated into the development of an effective curriculum.\"",
+      "page_number": 4
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "Yes",
+      "evidence_quote": "\"This study aimed to evaluate the impact of the \u201cDigital Health\u201d curriculum at our university on the perceptions of medical students regarding the relevance of digital health topics for their future professions and their self-assessed competence in these areas.\"",
+      "page_number": 3
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "Pre-post survey using Likert scales and retrospective online survey.",
+      "evidence_quote": "\"The perceived relevance of topics for their future careers and their subjective competence were evaluated before and after the curriculum using a Likert scale. Furthermore, the practical gamification-based teaching part of the robotics teaching unit was evaluated. In total, 6 months after completing the last semester, a follow-up analysis was performed with questions on the significance of the completed curriculum for current and future professional challenges regarding digital health and suggestions for improvement for innovative teaching.\"",
+      "page_number": 3
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "Identified areas for curriculum improvement, including adapting teaching methods and increasing the teaching of existing apps for digital documentation systems.",
+      "evidence_quote": "\"In follow-up question 5, former participants were asked to provide their assessment of the extent to which teaching should be adapted to the challenges of digital transformation. In particular an adaptation of the learning methodology (n=6); especially AI-supported, for more individualized or efficient or sustainable learning), familiarization with existing apps (n=5); especially digital documentation systems) and the general inclusion of digital health subjects (n=4) was indicated.\"",
+      "page_number": 11
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "Yes - Follow-up evaluation conducted after 6 months and 1 year.",
+      "evidence_quote": "\"In total, 6 months (cohort 1) and 1 year (cohort 2) after completion of the curriculum, participants were asked to participate in a retrospective online survey\"",
+      "page_number": 6
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "Curriculum content and teaching methods were adapted based on student feedback.",
+      "evidence_quote": "\"In follow-up question 5, former participants were asked to provide their assessment of the extent to which teaching should be adapted to the challenges of digital transformation. In particular an adaptation of the learning methodology (n=6); especially AI-supported, for more individualized or efficient or sustainable learning), familiarization with existing apps (n=5); especially digital documentation systems) and the general inclusion of digital health subjects (n=4) was indicated.\"",
+      "page_number": 11
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "Yes - Gamification was used in the robotics teaching unit.",
+      "evidence_quote": "\"A promising approach is gamification, which refers to the integration of playful elements in a serious context. Educators in the health care sector are also increasingly relying on gamification to optimize students\u2019 learning success\"",
+      "page_number": 2
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "Yes - The study assessed the impact of the curriculum on students' perceived competence and relevance of digital health topics.",
+      "evidence_quote": "\"This study provides an overview of the influence of our digital health curriculum on students\u2019 perception about their competence and the relevance of digital health topics for their future professional challenges.\"",
+      "page_number": 12
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "Yes - Students were informed about the curriculum and its social media channel.",
+      "evidence_quote": "\"At the beginning of the curriculum, all participants were informed of the existence of a social media channel.\"",
+      "page_number": 11
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "Yes - Students provided feedback on the curriculum's relevance and competence acquisition through surveys.",
+      "evidence_quote": "\"This was intended to evaluate when and how the opinions and subjective experiences of medical students can be optimally incorporated and integrated into the development of an effective curriculum.\"",
+      "page_number": 4
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "Yes - The study addressed data protection and information security.",
+      "evidence_quote": "\"In particular, data misuse and data theft were identified as risk factors.\"",
+      "page_number": 12
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "Yes - Student feedback was used to adapt the curriculum and teaching methods.",
+      "evidence_quote": "\"In follow-up question 5, former participants were asked to provide their assessment of the extent to which teaching should be adapted to the challenges of digital transformation.\"",
+      "page_number": 11
+    }
+  ]
+}

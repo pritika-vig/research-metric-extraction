@@ -57,7 +57,7 @@ class RemoteGCSPaperIngestor(Ingestor):
 
         for paper in self.papers:
             if not paper.url:
-                logger.warning(f"Paper has no URL: {paper.id}")
+                logger.warning(f"Paper has no URL: {paper.paper_id.get_canonical_id()}")
                 continue
 
             try:
@@ -75,7 +75,9 @@ class RemoteGCSPaperIngestor(Ingestor):
                     documents.append(doc)
 
             except Exception as e:
-                logger.warning(f"⚠️ Failed to process {paper.id}: {e}")
+                logger.warning(
+                    f"⚠️ Failed to process {paper.paper_id.get_canonical_id()}: {e}"
+                )
 
         return documents
 
@@ -102,9 +104,10 @@ class RemoteGCSPaperIngestor(Ingestor):
                 gcs_uri=gcs_uri,
                 blob_name=blob_name,
                 bucket_name=self.bucket_name,
+                source_url=paper.url,
                 format="pdf",
             ),
-            fetched_paper_metadata=paper,
+            paper_id=paper.paper_id,
         )
 
     def _handle_html(self, paper: FetchedPaperMetadata) -> Optional[Document]:
@@ -128,9 +131,10 @@ class RemoteGCSPaperIngestor(Ingestor):
                 gcs_uri=gcs_uri,
                 blob_name=blob_name,
                 bucket_name=self.bucket_name,
+                source_url=paper.url,
                 format="html",
             ),
-            fetched_paper_metadata=paper,
+            paper_id=paper.paper_id,
         )
 
     def _make_blob_name(self, paper: FetchedPaperMetadata, extension: str) -> str:

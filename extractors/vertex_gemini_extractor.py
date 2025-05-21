@@ -58,7 +58,10 @@ class VertexGeminiExtractor(Extractor):
         response_text = result.text.strip()
         logger.info(f"Gemini raw response:\n{response_text}")
         fields = self._parse_response(response_text, config)
-        return ExtractedDocumentData(document=document, fields=fields)
+        return self._build_extracted_document_data(
+            document=document,
+            fields=fields,
+        )
 
     def _build_prompt(self, config: ExtractionConfig) -> str:
         field_defs = "\n".join(
@@ -209,3 +212,14 @@ class VertexGeminiExtractor(Extractor):
                 )
 
         return extracted_fields
+
+    def _build_extracted_document_data(
+        self, document: Document, fields: List[ExtractedField]
+    ) -> ExtractedDocumentData:
+        return ExtractedDocumentData(
+            paper_id=document.paper_id,
+            paper_title=document.gcs_metadata.blob_name,
+            paper_gc_uri=document.gcs_metadata.gcs_uri,
+            source_url=document.gcs_metadata.source_url,
+            fields=fields,
+        )

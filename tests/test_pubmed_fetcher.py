@@ -136,6 +136,9 @@ def test_missing_pdf_link_uses_html_fallback(mock_esearch, mock_efetch, mock_rea
     assert results[0].authors == ["Smith, Jane"]
     assert results[0].url == "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC654321/"
     assert results[0].format == "html"
+    assert results[0].metadata["source"] == "pmc"
+    assert results[0].metadata["pmc_id"] == "654321"
+    assert results[0].paper_id.pmcid == "654321"
 
 
 @patch("fetchers.pubmed_fetcher.requests.get")

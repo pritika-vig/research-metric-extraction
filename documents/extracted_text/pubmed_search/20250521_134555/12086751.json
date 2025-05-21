@@ -1,0 +1,232 @@
+{
+  "paper_id": "12086751",
+  "title": "uploads/large_language_models_in_integrative_medicine:_progress,_challenges,_and_opportunities.html",
+  "source_pdf": "gs://patient-engagement-pipeline-bucket/uploads/large_language_models_in_integrative_medicine:_progress,_challenges,_and_opportunities.html",
+  "source_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12086751/",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Large Language Models in Integrative Medicine: Progress, Challenges, and Opportunities",
+      "evidence_quote": "\"This study, titled 'Large Language Models in Integrative Medicine: Progress, Challenges, and Opportunities', examines LLMs' development, deployment, and challenges in harmonizing Modern and TCM practices while identifying actionable strategies to advance this emerging field.\"",
+      "page_number": 1
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Hiu Fung Yip, Zeming Li, Lu Zhang, Aiping Lyu",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "Journal of Evidence-Based Medicine",
+      "evidence_quote": "\"citation_journal_title\\\" content=\\\"Journal of Evidence-Based Medicine\"",
+      "page_number": null
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Peer-reviewed",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "2025 May 19",
+      "evidence_quote": "\"citation_publication_date\\\" content=\\\"2025 May 19\"",
+      "page_number": null
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Integrative Medicine, Artificial Intelligence",
+      "evidence_quote": "\"Integrating Traditional Chinese Medicine (TCM) and Modern Medicine faces significant barriers...While Large Language Models (LLMs) in Medicine hold transformative potential to bridge these gaps...\"",
+      "page_number": 1
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "China, Hong Kong",
+      "evidence_quote": "\"According to the report from the National Health Commission in China in 2022, only 14.6% of China's out of the 8.42 billion medical services involved TCM...Even in Hong Kong, 25.9% of patients concurrently use TCM and Modern Medicine\"",
+      "page_number": 1
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Review",
+      "evidence_quote": "\"This review systematically examines LLMs' development, deployment, and challenges in harmonizing Modern and TCM practices while identifying actionable strategies to advance this emerging field.\"",
+      "page_number": 1
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To evaluate the opportunities and challenges for establishing LLMs in Integrative Medicine, emphasizing the need to address the fusion of decision-making processes from the distinct medical understandings of TCM and Modern Medicine Systems.",
+      "evidence_quote": "\"This review systematically evaluates the opportunities and challenges for establishing LLMs in Integrative Medicine, emphasizing the need to address the fusion of decision\u2010making processes from the distinct medical understandings of TCM and Modern Medicine Systems\"",
+      "page_number": 1
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "The review synthesizes technical insights with practical clinical considerations, providing a roadmap for leveraging LLMs to bridge TCM's empirical wisdom with modern medical systems.",
+      "evidence_quote": "\"This review synthesizes technical insights with practical clinical considerations, providing a roadmap for leveraging LLMs to bridge TCM's empirical wisdom with modern medical systems.\"",
+      "page_number": 1
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "Addressed, including liability for errors, data privacy, and regional regulatory compliance.",
+      "evidence_quote": "\"From a legal perspective, although the medicine LLMs tried to improve the accuracy and efficiency of the diagnosis, experience showed that the real\u2010world deployment would not be as good as the in\u2010house experiments. Hence, who should be responsible for the misdiagnosis and even medical malpractice?\"",
+      "page_number": 14
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "Discussed, noting the need for real-time evidence retrieval and improved response accuracy.",
+      "evidence_quote": "\"Updating LLMs frequently is highly impractical due to the intensive resources required for fine\u2010tuning. More practical techniques like Retrieval Augmented Generation (RAG) could help by letting LLMs pull real\u2010time data from medical guidelines or research papers, ensuring responses align with current standards.\"",
+      "page_number": 15
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "paper_id": "12089884",
+  "title": "uploads/the_applications_of_large_language_models_in_mental_health:_scoping_review.html",
+  "source_pdf": "gs://patient-engagement-pipeline-bucket/uploads/the_applications_of_large_language_models_in_mental_health:_scoping_review.html",
+  "source_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12089884/",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "The Applications of Large Language Models in Mental Health: Scoping Review",
+      "evidence_quote": "\"This study, titled 'The Applications of Large Language Models in Mental Health: Scoping Review'\"",
+      "page_number": 1
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Yu Jin, Jiayi Liu, Pan Li, Baosen Wang, Yangxinyu Yan, Huilin Zhang, Chenhao Ni, Jing Wang, Yi Li, Yajun Bu, Yuanyuan Wang",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "Journal of Medical Internet Research",
+      "evidence_quote": "\"Originally published in the Journal of Medical Internet Research\"",
+      "page_number": null
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Peer-reviewed",
+      "evidence_quote": "\"Studies eligible for inclusion were peer-reviewed articles focused on LLMs\u2019 applications in mental health.\"",
+      "page_number": null
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "2025 May 5",
+      "evidence_quote": "\"Published in the Journal of Medical Internet Research (https://www.jmir.org), 05.05.2025.\"",
+      "page_number": null
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Mental Health",
+      "evidence_quote": "\"Studies focused on the applications of large language models (LLMs) in the mental health field.\"",
+      "page_number": null
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "China, United States, Canada, Singapore, Israel, United Arab Emirates, India, United Kingdom, Switzerland, Germany, Malaysia, Netherlands, Greece, Iran, Russia, South Korea, Austria, Brazil, Morocco, Poland, Philippines, Australia, Turkey",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Original Research",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To summarize the applications of LLMs in mental health, including trends, application areas, performance comparisons, challenges, and prospective future directions.",
+      "evidence_quote": "\"This review aimed to summarize the applications of LLMs in mental health, including trends, application areas, performance comparisons, challenges, and prospective future directions.\"",
+      "page_number": null
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "LLMs show substantial potential to augment mental health research, diagnostics, and intervention strategies.",
+      "evidence_quote": "\"These findings highlight the substantial potential of LLMs to augment mental health research, diagnostics, and intervention strategies, underscoring the imperative for ongoing development and ethical deliberation in clinical settings.\"",
+      "page_number": null
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "None - across all phases (design, development, evaluation, implementation)",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "Yes - The study mentions the need for ethical deliberation in clinical settings and discusses data privacy, biases, and ethical concerns.",
+      "evidence_quote": "\"These findings highlight the substantial potential of LLMs to augment mental health research, diagnostics, and intervention strategies, underscoring the imperative for ongoing development and ethical deliberation in clinical settings...As these models continue to evolve, their role in mental health support is likely to expand, with a focus on enhancing data privacy, biases, and ethical considerations in clinical implementation.\"",
+      "page_number": null
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "Yes - The study acknowledges the practical limitations of LLMs in clinical settings and the need for further development.",
+      "evidence_quote": "\"While LLMs have demonstrated high performance on certain benchmarks, their practical applications in clinical settings are still limited.\"",
+      "page_number": null
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    }
+  ]
+}

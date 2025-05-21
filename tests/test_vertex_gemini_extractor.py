@@ -10,6 +10,7 @@ from models.document import Document
 from models.extraction_config import ExtractionConfig
 from models.extraction_field_spec import ExtractionFieldSpec
 from models.gcs_metadata import GCSMetadata
+from models.paper_id import PaperId
 
 
 # Test that well-formed Gemini responses are parsed correctly
@@ -46,14 +47,17 @@ def test_extract_parses_mock_response_correctly():
         ],
     )
 
+    paper_id = PaperId(pmcid="PMC123")
     document = Document(
         file_path=Path("tests/fake.pdf"),
         gcs_metadata=GCSMetadata(
             gcs_uri="gs://fake-bucket/fake.pdf",
             blob_name="fake.pdf",
             bucket_name="fake-bucket",
+            source_url="https://example.com/fake.pdf",
             format="pdf",
         ),
+        paper_id=paper_id,
     )
 
     extractor = VertexGeminiExtractor()
@@ -63,7 +67,7 @@ def test_extract_parses_mock_response_correctly():
 
     extracted = extractor.extract(document, config)
 
-    assert extracted.document == document
+    assert extracted.get_paper_id() == document.paper_id.get_canonical_id()
     assert len(extracted.fields) == 4
 
     title_field = next(f for f in extracted.fields if f.name == "Title")
@@ -99,6 +103,7 @@ def test_extract_handles_missing_fields_gracefully():
             gcs_uri="gs://fake/fake_missing.pdf",
             blob_name="fake_missing.pdf",
             bucket_name="fake",
+            source_url="https://example.com/fake_missing.pdf",
             format="pdf",
         ),
     )
@@ -144,6 +149,7 @@ def test_extract_handles_malformed_text():
             gcs_uri="gs://fake/fake_malformed.pdf",
             blob_name="fake_malformed.pdf",
             bucket_name="fake",
+            source_url="https://example.com/fake_malformed.pdf",
             format="pdf",
         ),
     )
@@ -175,6 +181,7 @@ def test_extract_handles_empty_response():
             gcs_uri="gs://fake/fake_empty.pdf",
             blob_name="fake_empty.pdf",
             bucket_name="fake",
+            source_url="https://example.com/fake_empty.pdf",
             format="pdf",
         ),
     )
@@ -210,6 +217,7 @@ def test_extract_handles_missing_evidence_and_page():
             gcs_uri="gs://fake/missing_evidence.pdf",
             blob_name="missing_evidence.pdf",
             bucket_name="fake",
+            source_url="https://example.com/missing_evidence.pdf",
             format="pdf",
         ),
     )
@@ -248,7 +256,8 @@ def test_extract_handles_html_document():
             gcs_uri="gs://fake/html_doc.html",
             blob_name="html_doc.html",
             bucket_name="fake",
-            format="html",  # ✅ HTML format triggers correct MIME
+            source_url="https://example.com/html_doc.html",
+            format="html",
         ),
     )
 
@@ -276,6 +285,7 @@ def test_extract_raises_on_unsupported_format():
             gcs_uri="gs://fake/fake.txt",
             blob_name="fake.txt",
             bucket_name="fake",
+            source_url="https://example.com/fake.txt",
             format="txt",
         ),
     )

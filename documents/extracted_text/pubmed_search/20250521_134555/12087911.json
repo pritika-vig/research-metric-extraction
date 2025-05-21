@@ -1,0 +1,232 @@
+{
+  "paper_id": "12087911",
+  "title": "uploads/using_the_power_of_artificial_intelligence_to_improve_the_diagnosis_and_management_of_nonmelanoma_sk.html",
+  "source_pdf": "gs://patient-engagement-pipeline-bucket/uploads/using_the_power_of_artificial_intelligence_to_improve_the_diagnosis_and_management_of_nonmelanoma_sk.html",
+  "source_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12087911/",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Using the power of artificial intelligence to improve the diagnosis and management of nonmelanoma skin cancer",
+      "evidence_quote": "Using the power of artificial intelligence to improve the diagnosis and management of nonmelanoma skin cancer",
+      "page_number": 1
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Fahimeh Abdollahimajd, Fatemeh Abbasi, Alireza Motamedi, Narges Koohi, Reza Mohamoud Robati, Mona Gorji",
+      "evidence_quote": "Fahimeh Abdollahimajd, Fatemeh Abbasi, Alireza Motamedi, Narges Koohi, Reza Mohamoud Robati, Mona Gorji",
+      "page_number": 1
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "Journal of Research in Medical Sciences : The Official Journal of Isfahan University of Medical Sciences",
+      "evidence_quote": "Journal of Research in Medical Sciences : The Official Journal of Isfahan University of Medical Sciences",
+      "page_number": 1
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Peer-reviewed",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "2025 Apr 30",
+      "evidence_quote": "2025 Apr 30",
+      "page_number": 1
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Dermatology, Artificial Intelligence in Healthcare",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "Iran",
+      "evidence_quote": "Skin Research Center, Shahid Beheshti University of Medical Sciences, Tehran, Iran",
+      "page_number": 1
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Review",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To investigate the application and capabilities of AI in the diagnosis and management of NMSCs.",
+      "evidence_quote": "This study aims to investigate the application and capabilities of AI in the diagnosis and management of NMSCs.",
+      "page_number": 3
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "AI systems show promise in enhancing the accuracy, efficiency, and accessibility of NMSC diagnosis and management, but challenges remain in ensuring robustness, explainability, and generalizability.",
+      "evidence_quote": "Artificial intelligence (AI) systems show promise in enhancing the accuracy, efficiency, and accessibility of NMSC diagnosis and management.",
+      "page_number": 2
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "Yes",
+      "evidence_quote": "While patients understand the benefits of AI-based skin cancer screening, they also have concerns about reduced accuracy and increased anxiety, emphasizing the importance of collaboration between AI and human physicians.",
+      "page_number": 8
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "Consultation",
+      "evidence_quote": "While patients understand the benefits of AI-based skin cancer screening, they also have concerns about reduced accuracy and increased anxiety, emphasizing the importance of collaboration between AI and human physicians.",
+      "page_number": 8
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "None",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "Highlighted patient concerns about reduced accuracy and increased anxiety with AI-based screening.",
+      "evidence_quote": "While patients understand the benefits of AI-based skin cancer screening, they also have concerns about reduced accuracy and increased anxiety, emphasizing the importance of collaboration between AI and human physicians.",
+      "page_number": 8
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "Emphasized the importance of collaboration between AI and human physicians for successful implementation.",
+      "evidence_quote": "While patients understand the benefits of AI-based skin cancer screening, they also have concerns about reduced accuracy and increased anxiety, emphasizing the importance of collaboration between AI and human physicians.",
+      "page_number": 8
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "Yes",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "Yes",
+      "evidence_quote": "While patients understand the benefits of AI-based skin cancer screening, they also have concerns about reduced accuracy and increased anxiety, emphasizing the importance of collaboration between AI and human physicians.",
+      "page_number": 8
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "Yes",
+      "evidence_quote": "Existing algorithms have been trained on data primarily from Caucasian or Asian patients, highlighting the need for diverse training data.",
+      "page_number": 8
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "Yes",
+      "evidence_quote": "Additionally, important ethical considerations, such as patient privacy, algorithm transparency, algorithmic bias, lack of diversity in training data (especially for darker skin tones), and inequality in access and access gaps, should be carefully considered.",
+      "page_number": 9
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "Yes",
+      "evidence_quote": "Incorporating these tools into current healthcare processes poses a substantial obstacle.",
+      "page_number": 9
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "Yes",
+      "evidence_quote": "To truly evaluate the potential of AI algorithms in daily practice, detailed clinical studies in the real-world settings are necessary.",
+      "page_number": 8
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    }
+  ]
+}

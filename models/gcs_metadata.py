@@ -8,4 +8,5 @@ class GCSMetadata:
     gcs_uri: str
     blob_name: str
     bucket_name: str
+    source_url: str
     format: str  # e.g. "pdf", "html"

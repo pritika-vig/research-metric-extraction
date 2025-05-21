@@ -1,11 +1,13 @@
 from dataclasses import dataclass
 from typing import Any, Dict, List
 
+from models.paper_id import PaperId
+
 
 # Metadata model for found papers
 @dataclass
 class FetchedPaperMetadata:
-    id: str
+    paper_id: PaperId
     title: str
     authors: List[str]
     url: str  # This can be either a PDF or HTML article URL
