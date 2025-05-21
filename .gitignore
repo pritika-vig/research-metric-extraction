@@ -7,7 +7,6 @@ __pycache__/
 *.env
 *.DS_Store
 .labenv/
-*.json
 service-account-key.json
 .vscode/
 .flake8

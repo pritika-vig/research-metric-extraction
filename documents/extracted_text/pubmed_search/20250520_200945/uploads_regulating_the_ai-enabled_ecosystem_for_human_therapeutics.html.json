@@ -1,0 +1,188 @@
+{
+  "paper_id": "12085592",
+  "source_pdf": "gs://patient-engagement-pipeline-bucket/uploads/regulating_the_ai-enabled_ecosystem_for_human_therapeutics.html",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Regulating the AI-enabled ecosystem for human therapeutics",
+      "evidence_quote": "\"Regulating the AI-enabled ecosystem for human therapeutics\"",
+      "page_number": null
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Rominder Singh, Mark Paxton, Jared Auclair",
+      "evidence_quote": "\"Rominder Singh, Mark Paxton, Jared Auclair\"",
+      "page_number": null
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "Communications Medicine",
+      "evidence_quote": "\"Commun Med (Lond)\"",
+      "page_number": null
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "peer-reviewed",
+      "evidence_quote": "\"Peer review reports are available\"",
+      "page_number": null
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "2025 May 17",
+      "evidence_quote": "\"2025 May 17\"",
+      "page_number": null
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Regulatory Sciences, AI, Biopharmaceutical",
+      "evidence_quote": "\"Regulatory Sciences & AI\"",
+      "page_number": null
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "USA",
+      "evidence_quote": "\"Boston, MA 02115 USA\"",
+      "page_number": null
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Perspective",
+      "evidence_quote": "\"This Perspective examines the challenges of regulating AI-driven technologies in drug discovery and development.\"",
+      "page_number": null
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To examine the challenges of regulating AI-driven technologies in drug discovery and development, evaluate current global drug regulatory practices, discuss gaps and unknowns, and provide recommendations on addressing these issues to facilitate effective regulations of AI-driven innovation in the biopharmaceutical industry.",
+      "evidence_quote": "\"This Perspective examines the challenges of regulating AI-driven technologies in drug discovery and development...Here, we evaluate current global drug regulatory practices, discuss gaps and unknowns, and provide recommendations on addressing these issues to facilitate effective regulations of AI-driven innovation in the biopharmaceutical industry.\"",
+      "page_number": null
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "The study highlights the need for robust regulatory oversight of AI-driven technologies in the biopharmaceutical industry, emphasizing the importance of addressing challenges such as AI bias, hallucination risks, data privacy, and the \"black box\" nature of AI models. It recommends investment in drug regulators' capabilities, legislative action, harmonization of AI regulations, leveraging AI for routine tasks, human-in-the-loop frameworks, and regulator-sponsor partnerships to ensure the safe and effective use of AI in drug development.",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any involvement of patients or the public? This includes participation, feedback, consultation, or co-design.",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information, Consultation, Collaboration, or Partnership.",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    }
+  ]
+}

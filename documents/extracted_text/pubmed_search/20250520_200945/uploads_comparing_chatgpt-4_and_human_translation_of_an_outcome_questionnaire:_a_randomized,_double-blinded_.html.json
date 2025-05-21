@@ -1,0 +1,188 @@
+{
+  "paper_id": "12085935",
+  "source_pdf": "gs://patient-engagement-pipeline-bucket/uploads/comparing_chatgpt-4_and_human_translation_of_an_outcome_questionnaire:_a_randomized,_double-blinded_.html",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Comparing ChatGPT-4 and Human Translation of an Outcome Questionnaire: A Randomized, Double-Blinded Non-inferiority Study",
+      "evidence_quote": "Comparing ChatGPT-4 and Human Translation of an Outcome Questionnaire: A Randomized, Double-Blinded Non-inferiority Study",
+      "page_number": null
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Christopher B S\u00f8rensen, Anders Gram-Hanssen, Jacob Rosenberg, Jason J Baker",
+      "evidence_quote": "Christopher B S\u00f8rensen, Anders Gram-Hanssen, Jacob Rosenberg, Jason J Baker",
+      "page_number": null
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "Cureus",
+      "evidence_quote": "Cureus",
+      "page_number": null
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Peer-reviewed",
+      "evidence_quote": "Accepted 2025 Apr 17; Collection date 2025 Apr.",
+      "page_number": null
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "2025 Apr 18",
+      "evidence_quote": "2025 Apr 18",
+      "page_number": null
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Surgery, Artificial Intelligence",
+      "evidence_quote": "Surgery, Herlev Hospital, Herlev, DNK",
+      "page_number": null
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "DNK (Denmark)",
+      "evidence_quote": "DNK",
+      "page_number": null
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Original Research",
+      "evidence_quote": "This study aimed to investigate whether ChatGPT-4 could replace traditional forward-backward translation by humans when translating a questionnaire into another language through a non-inferiority design.",
+      "page_number": null
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To investigate whether ChatGPT-4 could replace traditional forward-backward translation by humans when translating a medical outcome questionnaire from English to Danish in a non-inferiority design.",
+      "evidence_quote": "This study aimed to investigate whether ChatGPT-4 could replace traditional forward-backward translation by humans when translating a medical outcome questionnaire from English to Danish in a non-inferiority design.",
+      "page_number": null
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "ChatGPT-4 may serve as a suitable substitute for traditional forward-backward translation when translating an outcome questionnaire, provided that the ChatGPT-4 translation is subjected to human quality control and is pretested through face validation before clinical use.",
+      "evidence_quote": "ChatGPT-4 may serve as a suitable substitute for traditional forward-backward translation when translating an outcome questionnaire, provided that the ChatGPT-4 translation is subjected to human quality control and is pretested through face validation before clinical use.",
+      "page_number": null
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any involvement of patients or the public? This includes participation, feedback, consultation, or co-design.",
+      "value": "Yes",
+      "evidence_quote": "For this study, the questionnaire was translated from English to Danish twice, once using ChatGPT-4 and once by human translators [<a href=\"#REF16\" class=\"usa-link\" aria-describedby=\"REF16\">16</a>]. A comparison of the translations was made before and after the face validation process, which involved a series of participant interviews aimed at improving the questionnaires and providing evidence for their face validity.",
+      "page_number": null
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information, Consultation, Collaboration, or Partnership.",
+      "value": "Consultation",
+      "evidence_quote": "A comparison of the translations was made before and after the face validation process, which involved a series of participant interviews aimed at improving the questionnaires and providing evidence for their face validity.",
+      "page_number": null
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "Yes",
+      "evidence_quote": "The primary objective was to compare the two translated questionnaires after face validation by assessing the readability, comprehension, usage of appropriate language, and the participants\u2019 overall opinions.",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "Likert scale, semi-structured interviews",
+      "evidence_quote": "For this assessment, participants answered four questions using a Likert scale from 1 to 5.",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "Improved translation quality",
+      "evidence_quote": "After face validation, there were no significant differences regarding readability, comprehension, appropriate use of language, and overall opinion of the questionnaire",
+      "page_number": null
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "Yes",
+      "evidence_quote": "A comparison of the translations was made before and after the face validation process, which involved a series of participant interviews aimed at improving the questionnaires and providing evidence for their face validity.",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "Yes",
+      "evidence_quote": "The primary objective was to compare the two translated questionnaires after face validation by assessing the readability, comprehension, usage of appropriate language, and the participants\u2019 overall opinions.",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "Yes",
+      "evidence_quote": "A comparison of the translations was made before and after the face validation process, which involved a series of participant interviews aimed at improving the questionnaires and providing evidence for their face validity.",
+      "page_number": null
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    }
+  ]
+}
