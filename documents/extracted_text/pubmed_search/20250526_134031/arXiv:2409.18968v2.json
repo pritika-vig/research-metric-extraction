@@ -1,0 +1,237 @@
+{
+  "paper_id": {
+    "doi": null,
+    "arxiv_id": "2409.18968v2",
+    "pmcid": null,
+    "pmid": null
+  },
+  "paper_title": "uploads/safety_challenges_of_ai_in_medicine_in_the_era_of_large_language_models.pdf",
+  "paper_gc_uri": "gs://patient-engagement-pipeline-bucket/uploads/safety_challenges_of_ai_in_medicine_in_the_era_of_large_language_models.pdf",
+  "source_url": "http://arxiv.org/pdf/2409.18968v2",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Safety challenges of AI in medicine in the era of large language models",
+      "evidence_quote": "Safety challenges of Al in medicine in the era of large language models",
+      "page_number": 1
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Xiaoye Wang, Nicole Xi Zhang, Hongyu He, Trang Nguyen, Kun-Hsing Yu, Hao Deng, Cynthia Brandt, Danielle S. Bitterman, Ling Pan, Ching-Yu Cheng, James Zou, and Dianbo Liu",
+      "evidence_quote": "Xiaoye Wang 1,2,\u2020,*, Nicole Xi Zhang\u00b3,\u2020, Hongyu He\u00b9, Trang Nguyen\u00b9, Kun-Hsing Yu\u2074, Hao Deng4,5, Cynthia Brandt, Danielle S. Bitterman4,7, Ling Pan, Ching-Yu Cheng\u00b9, James Zou\u00ba, and Dianbo Liu1,**",
+      "page_number": 1
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Peer-reviewed",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "30 Jan 2025",
+      "evidence_quote": "arXiv:2409.18968v2 [cs.CY] 30 Jan 2025",
+      "page_number": 1
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Artificial Intelligence in Healthcare",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "Singapore, UK, Canada, USA, Hong Kong",
+      "evidence_quote": "\u00b9National University of Singapore, Singapore, Singapore",
+      "page_number": null
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Review",
+      "evidence_quote": "In response, this review examines emerging risks in Al utilization during the LLM era.",
+      "page_number": 1
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To review the safety issues of AI in medicine in the era of large language models (LLMs) and discuss how trust in AI can be built in healthcare settings.",
+      "evidence_quote": "In this article, we systematically reviews safety issues of Al in medicine in the era of LLMs and discuss how possibly trust on Al can be won in healthcare settings.",
+      "page_number": 2
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "The review identifies and discusses safety challenges related to AI reliability, alignment, hallucinations, privacy concerns, and difficulties in processing complex logic, emphasizing the need for addressing these risks to establish trust in AI for healthcare.",
+      "evidence_quote": "In this review, we discussed the potential safety issues of Al in healthcare, highlighting LLMs' rapid advancements alongside the significant safety challenges that impede its broader adoption.",
+      "page_number": 15
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "Yes",
+      "evidence_quote": "The main barrier is the safety concerns shared by patients, clinicians, and the public.",
+      "page_number": 2
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "Information",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "None",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "Identified safety concerns",
+      "evidence_quote": "The main barrier is the safety concerns shared by patients, clinicians, and the public.",
+      "page_number": 2
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "Yes",
+      "evidence_quote": "The main barrier is the safety concerns shared by patients, clinicians, and the public.",
+      "page_number": 2
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "Yes",
+      "evidence_quote": "Biased models exacerbate these issues, particularly affecting underrepresented groups, leading to misdiagnoses, inappropriate treatments, and widening health disparities.",
+      "page_number": 14
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "Yes",
+      "evidence_quote": "In addition to these, Regulatory and Ethical Issues also pose great challenges for general Al models when applied to a new patient population, and the emergence of LLMs with their broad range of applications further amplifies the severity of this issue 72\u201375.",
+      "page_number": 11
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "Yes",
+      "evidence_quote": "Integrating Al and LLMs into existing systems can be complicated due to inter-operator discrepancies and differences in data standards, which can lead to inefficiencies and errors in patient care 36.",
+      "page_number": 14
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "Yes",
+      "evidence_quote": "The main barrier is the safety concerns shared by patients, clinicians, and the public.",
+      "page_number": 2
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    }
+  ]
+}

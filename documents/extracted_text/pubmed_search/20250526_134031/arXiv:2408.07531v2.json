@@ -1,0 +1,237 @@
+{
+  "paper_id": {
+    "doi": null,
+    "arxiv_id": "2408.07531v2",
+    "pmcid": null,
+    "pmid": null
+  },
+  "paper_title": "uploads/development_of_a_large_language_model-based_multi-agent_clinical___decision_support_system_for_korea.pdf",
+  "paper_gc_uri": "gs://patient-engagement-pipeline-bucket/uploads/development_of_a_large_language_model-based_multi-agent_clinical___decision_support_system_for_korea.pdf",
+  "source_url": "http://arxiv.org/pdf/2408.07531v2",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Development of a Large Language Model-based Multi-Agent Clinical Decision Support System for Korean Triage and Acuity Scale (KTAS)-Based Triage and Treatment Planning in Emergency Departments",
+      "evidence_quote": "\"This study presents an LLM-driven CDSS designed to assist ED physicians and nurses in patient triage, treatment planning, and overall emergency care management.\"",
+      "page_number": 1
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Seungjun Han, Wongyung Choi",
+      "evidence_quote": "N/A",
+      "page_number": 1
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Preprint",
+      "evidence_quote": "N/A",
+      "page_number": 1
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "27 Aug 2024",
+      "evidence_quote": "N/A",
+      "page_number": 1
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Artificial Intelligence, Emergency Medicine",
+      "evidence_quote": "\"This work contributes to the growing field of AI applications in emergency medicine and offers a promising direction for future research and clinical implementation.\"",
+      "page_number": 1
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "USA, South Korea",
+      "evidence_quote": "\"For instance, ED visits increased by 23.1% in the United States from 1997 to 2007, reaching 116.8 million annual visits [1]. Similar trends have been observed globally, including in South Korea\"",
+      "page_number": 1
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Original Research",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To develop and evaluate a large language model-based clinical decision support system (CDSS) for emergency departments, specifically for triage and treatment planning using the Korean Triage and Acuity Scale (KTAS).",
+      "evidence_quote": "\"In this study, we seek to address this gap by proposing a novel multi-agent CDSS powered by state-of-the-art large language models. This system aims to integrate KTAS-based triage with comprehensive emergency care management, lever-aging advanced AI technologies to support emergency room physicians and nurses in their decision-making processes.\"",
+      "page_number": 2
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "The multi-agent CDSS demonstrated high accuracy in KTAS classification and clinical decision-making compared to a single-agent system, showing potential for enhancing emergency care quality and safety.",
+      "evidence_quote": "\"Our LLM-based multi-agent CDSS demonstrated superior performance compared to the single-agent system across multiple dimensions of emergency care decision-making. The system's effectiveness was particularly evident in KTAS-based triage and clinical decision-making.\"",
+      "page_number": 4
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "The study discusses integrating the CDSS into clinical workflows and existing Electronic Medical Record (EMR) systems.",
+      "evidence_quote": "\"Importantly, the effective integration of the CDSS into clinical workflows remains a critical consideration.\"",
+      "page_number": 6
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "The study suggests the CDSS could standardize care practices and improve communication between ED staff.",
+      "evidence_quote": "\"The system could help standardize care practices by providing accurate, evidence-based recommendations, potentially reducing variability in treatment decisions and improving adherence to clinical guidelines.\"",
+      "page_number": 5
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "The study assesses the accuracy of KTAS classification and clinical decision-making, but not the impact of patient engagement.",
+      "evidence_quote": "\"An experienced emergency physician reviewed the CDSS outputs for each scenario. He assessed the accuracy of KTAS classification, appropriateness of diagnosis and treatment recommendations, comprehensiveness of medication reviews, and overall clinical decision quality.\"",
+      "page_number": 3
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "The study mentions the need for regular system performance audits across diverse patient populations to mitigate biases.",
+      "evidence_quote": "\"Regular system performance audits across diverse patient populations will be necessary to identify and mitigate any biases.\"",
+      "page_number": 6
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "The study addresses patient privacy, data protection, accountability, transparency, and bias in AI decision-making.",
+      "evidence_quote": "\"The implementation of AI-driven clinical decision support systems in emergency medicine raises important ethical considerations and data privacy concerns that must be carefully addressed.\"",
+      "page_number": 6
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "The study discusses the importance of seamless integration into clinical workflows and existing EMR systems.",
+      "evidence_quote": "\"Developing methodologies for seamless integration is essential for the system's success in real-world settings.\"",
+      "page_number": 6
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "The study uses simulated emergency department scenarios, but does not report real-world evaluation or deployment.",
+      "evidence_quote": "\"We evaluated our CDSS using the Asclepius dataset, which comprises simulated emergency department scenarios [15].\"",
+      "page_number": 3
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    }
+  ]
+}

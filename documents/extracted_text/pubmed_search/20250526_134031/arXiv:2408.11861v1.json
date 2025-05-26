@@ -1,0 +1,237 @@
+{
+  "paper_id": {
+    "doi": null,
+    "arxiv_id": "2408.11861v1",
+    "pmcid": null,
+    "pmid": null
+  },
+  "paper_title": "uploads/speaking_the_same_language:_leveraging_llms_in_standardizing_clinical___data_for_ai.pdf",
+  "paper_gc_uri": "gs://patient-engagement-pipeline-bucket/uploads/speaking_the_same_language:_leveraging_llms_in_standardizing_clinical___data_for_ai.pdf",
+  "source_url": "http://arxiv.org/pdf/2408.11861v1",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Speaking the Same Language: Leveraging LLMs in Standardizing Clinical Data for AI",
+      "evidence_quote": "Speaking the Same Language: Leveraging LLMs in Standardizing Clinical Data for AI",
+      "page_number": 1
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Arindam Sett, Yogesh Pandit, Somaye Hashemifar, Mrunal Yadav, Mohsen Hejrati",
+      "evidence_quote": "N/A",
+      "page_number": 1
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Preprint",
+      "evidence_quote": "\"arXiv:2408.11861v1 [cs.CL] 16 Aug 2024\"",
+      "page_number": 1
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "August 23, 2024",
+      "evidence_quote": "August 23, 2024",
+      "page_number": 1
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Clinical Data Standardization, Artificial Intelligence",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "USA",
+      "evidence_quote": "South San Francisco, CA, USA",
+      "page_number": 1
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Original Research",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To leverage Large Language Models (LLMs) for mapping raw datasets to the HL7 FHIR clinical data standard, aiming to improve data standardization and AI integration in healthcare.",
+      "evidence_quote": "This work is an attempt to leverage LLMs for mapping any raw dataset to a clinical data standard; HL7 Fast Healthcare Interoperability Resources (FHIR) [6].",
+      "page_number": 2
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "The study found that LLMs, when used with Retrieval-Augmented Generation (RAG), can effectively map clinical data elements to the FHIR standard, reducing the need for manual data curation and expediting AI integration in healthcare.",
+      "evidence_quote": "The results indicate that this approach is a viable method for producing FHIR mapping for data elements from clinical datasets.",
+      "page_number": 8
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "Yes",
+      "evidence_quote": "We would like to thank all the study participants and their families, and all the site investigators, study coordinators, and staff.",
+      "page_number": 9
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "Information",
+      "evidence_quote": "We would like to thank all the study participants and their families, and all the site investigators, study coordinators, and staff.",
+      "page_number": 9
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "None",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "Acknowledgment of study participants and their families.",
+      "evidence_quote": "We would like to thank all the study participants and their families, and all the site investigators, study coordinators, and staff.",
+      "page_number": 9
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "Yes",
+      "evidence_quote": "We would like to thank all the study participants and their families, and all the site investigators, study coordinators, and staff.",
+      "page_number": 9
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "Yes",
+      "evidence_quote": "The use of disparate data sources raises concerns about privacy and data security. Furthermore, the algorithms developed using the data can be unknowingly biased due to the variations in the quality of data from these different sources.",
+      "page_number": 2
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "Yes",
+      "evidence_quote": "In recent years, FHIR has emerged as a leading standard for clinical data exchange. FHIR provides a common framework and set of APIs for representing and sharing clinical data in a standardized way.",
+      "page_number": 3
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "Yes",
+      "evidence_quote": "In this work we have taken an incremental approach with prompt engineering to create FHIR mapping. Initially we set out with basic prompting with minimal information in the prompt (viz. just the input data dictionary row and some simple instructions to map to FHIR), and then iterate over the input data dictionary sets after carefully examining output FHIR mapping generated.",
+      "page_number": 6
+    }
+  ]
+}

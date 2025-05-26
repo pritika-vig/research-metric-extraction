@@ -12,6 +12,26 @@ def build_patient_engagement_config() -> ExtractionConfig:
                 "Title", "Full title of the study as stated in the paper"
             ),
             ExtractionFieldSpec(
+                "Survey Paper Fit",
+                (
+                    "This field represents how well we think this paper fits in to our "
+                    "overall area of exploration. The goal of the overall research project is to "
+                    "evaluate whether papers reporting on the use of LLMs in healthcare "
+                    "incorporate patient engagement in their study, and identify the metrics "
+                    "used to assess the impact of patient engagement initiatives."
+                ),
+            ),
+            ExtractionFieldSpec(
+                "Summary", "A short summary of the paper's content and findings."
+            ),
+            ExtractionFieldSpec(
+                "Reported Engagement",
+                (
+                    "A short summary of whether the paper reports patient engagement "
+                    "and how it does that. Please name metrics if they exist."
+                ),
+            ),
+            ExtractionFieldSpec(
                 "Author(s)",
                 "List of all authors involved in the paper, in order of appearance",
             ),

@@ -1,0 +1,237 @@
+{
+  "paper_id": {
+    "doi": null,
+    "arxiv_id": "2407.19256v1",
+    "pmcid": null,
+    "pmid": null
+  },
+  "paper_title": "uploads/stochastic_parrots_or_icu_experts?_large_language_models_in_critical___care_medicine:_a_scoping_revi.pdf",
+  "paper_gc_uri": "gs://patient-engagement-pipeline-bucket/uploads/stochastic_parrots_or_icu_experts?_large_language_models_in_critical___care_medicine:_a_scoping_revi.pdf",
+  "source_url": "http://arxiv.org/pdf/2407.19256v1",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Stochastic Parrots or ICU Experts? Large Language Models in Critical Care Medicine: A Scoping Review",
+      "evidence_quote": "\"This scoping review aims to provide a panoramic portrait of the application of LLMs in CCM.\"",
+      "page_number": 1
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Tongyue Shi, Jun Ma, Zihan Yu, Haowei Xu, Minqi Xiong, Meirong Xiao, Yilin Li, Huiying Zhao, and Guilan Kong",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Peer-reviewed",
+      "evidence_quote": "\"Peer-reviewed journal and conference articles that discussed the application of LLMs in critical care settings were included.\"",
+      "page_number": 1
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "June 10, 2024",
+      "evidence_quote": "\"Literature in seven databases, including PubMed, Embase, Scopus, Web of Science, CINAHL, IEEE Xplore, and ACM Digital Library, were searched from January 1, 2019, to June 10, 2024.\"",
+      "page_number": 1
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Critical Care Medicine (CCM)",
+      "evidence_quote": "\"Critical care medicine (CCM), also called intensive care medicine, is an essential field dedicated to the management of severely ill patients, emphasizing rapid and life-critical decision-making and interventions.\"",
+      "page_number": 2
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "Primarily United States, with contributions from other countries",
+      "evidence_quote": "\"The authors from the United States took the lead in most studies (n=11, 45.8%), followed by authors from Israel (n=2, 8.33%), and individuals from Argentina, Belgium, China, Germany, Ireland, Italy, Japan, Korea, Saudi Arabia, Spain, and Switzerland, each contributing one article.\"",
+      "page_number": 10
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Scoping Review",
+      "evidence_quote": "\"This study was conducted using a scoping review methodology, which is particularly well-suited for fields where the research topics are complex and varied.\"",
+      "page_number": 6
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To systematically review the applications of Large Language Models (LLMs) in Critical Care Medicine (CCM), identifying advantages, challenges, and future potentials.",
+      "evidence_quote": "\"This study aims to systematically review the applications of LLMs in CCM, identifying the advantages, challenges, and future potentials of LLMs in this field.\"",
+      "page_number": 3
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "LLMs hold substantial promise for transforming clinical practice and improving patient outcomes in CCM, but face challenges like hallucinations, poor interpretability, and ethical issues.",
+      "evidence_quote": "\"An extensive examination of the selected literature revealed that LLMs hold substantial promise for transforming clinical practice and improving patient outcomes in CCM.\"",
+      "page_number": 15
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "Yes, ethical considerations are mentioned as a challenge",
+      "evidence_quote": "\"However, LLMs face challenges when applied in medicine, such as uncertain accuracy and coherence, recency bias, hallucinations, poor interpretability, and ethical issues [17].\"",
+      "page_number": 3
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "Yes, the review discusses the need for integrating up-to-date medical knowledge and improving training and deployment scalability.",
+      "evidence_quote": "\"Future research should focus on enhancing model reliability and interpretability, optimizing prompt engineering techniques, improving training and deployment scalability, integrating up-to-date medical knowledge, mitigating bias and ensuring fairness, developing comprehensive evaluation benchmarks, and strengthening privacy and ethical guidelines.\"",
+      "page_number": 20
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "Yes, the review assesses real-world studies employing LLMs in CCM.",
+      "evidence_quote": "\"This review is important in moving beyond the hype and assessing the real-world studies of employing LLMs in CCM.\"",
+      "page_number": 3
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "paper_id": {
+    "doi": null,
+    "arxiv_id": "2501.13936v1",
+    "pmcid": null,
+    "pmid": null
+  },
+  "paper_title": "uploads/evaluating_computational_accuracy_of_large_language_models_in_numerical___reasoning_tasks_for_health.pdf",
+  "paper_gc_uri": "gs://patient-engagement-pipeline-bucket/uploads/evaluating_computational_accuracy_of_large_language_models_in_numerical___reasoning_tasks_for_health.pdf",
+  "source_url": "http://arxiv.org/pdf/2501.13936v1",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Evaluating Computational Accuracy of Large Language Models in Numerical Reasoning Tasks for Healthcare Applications",
+      "evidence_quote": "Evaluating Computational Accuracy of Large Language Models in Numerical Reasoning Tasks for Healthcare Applications",
+      "page_number": 1
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Arjun R. Malghan",
+      "evidence_quote": "Arjun R. Malghan",
+      "page_number": 1
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Preprint",
+      "evidence_quote": "A Preprint",
+      "page_number": 1
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "July 20, 2024",
+      "evidence_quote": "July 20, 2024",
+      "page_number": 1
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Healthcare, Artificial Intelligence, Natural Language Processing",
+      "evidence_quote": "Large Language Models (LLMs) have emerged as transformative tools in the healthcare sector, demonstrating remarkable capabilities in natural language understanding and generation.",
+      "page_number": 1
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Original Research",
+      "evidence_quote": "This study investigates the computational accuracy of LLMs in numerical reasoning tasks within healthcare contexts.",
+      "page_number": 1
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To investigate the computational accuracy of Large Language Models (LLMs) in numerical reasoning tasks within healthcare contexts, and to identify avenues for further refinement to support critical decision-making in clinical environments.",
+      "evidence_quote": "This study investigates the computational accuracy of LLMs in numerical reasoning tasks within healthcare contexts...The findings aim to contribute to the development of reliable, interpretable, and contextually relevant AI tools for healthcare.",
+      "page_number": 1
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "The LLM achieved an overall accuracy of 84.10% in numerical reasoning tasks, with improved performance in straightforward tasks. Integration of a fact-checking pipeline improved accuracy by 11%.",
+      "evidence_quote": "The results indicate an overall accuracy of 84.10%, with improved performance in straightforward numerical tasks and challenges in multi-step reasoning. The integration of a fact-checking pipeline improved accuracy by 11%, underscoring the importance of validation mechanisms.",
+      "page_number": 1
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "None",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "The study discusses the potential for LLMs to revolutionize healthcare workflows and the need for clinician trust and interpretability frameworks for widespread adoption.",
+      "evidence_quote": "The study demonstrates the potential of LLMs to revolutionize healthcare workflows by automating routine numerical reasoning tasks, thereby reducing clinician workload and improving efficiency...However, for these technologies to gain widespread adoption, robust verification mechanisms, interpretability frameworks, and clinician trust must be prioritized.",
+      "page_number": 10
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "The study suggests that LLMs can support clinicians in tasks such as treatment planning and resource allocation, potentially leading to more informed and timely decision-making.",
+      "evidence_quote": "By supporting clinicians in tasks such as treatment planning and resource allocation, LLMs can enable more informed and timely decision-making.",
+      "page_number": 10
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "The study acknowledges that the dataset may not fully capture the complexity and diversity of real-world clinical scenarios, including rare diseases and multi-morbid conditions.",
+      "evidence_quote": "The dataset, although robust, may not fully capture the complexity and diversity of real-world clinical scenarios. For example, rare diseases, multi-comorbid conditions, and interdisciplinary healthcare cases were underrepresented.",
+      "page_number": 9
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "The study mentions ethical concerns related to over-reliance on AI and lack of interpretability in model outputs. It also discusses the need for privacy compliance and consistency in data collection and annotation practices.",
+      "evidence_quote": "Resistance from healthcare professionals accustomed to traditional workflows presents a potential barrier to the real-world implementation of LLMs. Furthermore, ethical concerns such as over-reliance on AI and lack of interpretability in model outputs require careful consideration...This effort would require standardized data collection and annotation practices to ensure quality, privacy compliance, and consistency.",
+      "page_number": null
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "The study discusses integration barriers related to resistance from healthcare professionals and the need for interpretability frameworks to build clinician trust.",
+      "evidence_quote": "Resistance from healthcare professionals accustomed to traditional workflows presents a potential barrier to the real-world implementation of LLMs.",
+      "page_number": 9
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "The study emphasizes the need for longitudinal studies to evaluate the effectiveness of LLMs in real-world clinical workflows.",
+      "evidence_quote": "While the immediate performance of LLMs in controlled testing scenarios is promising, longitudinal studies are essential to evaluate their effectiveness in real-world clinical workflows over extended periods.",
+      "page_number": 11
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "The study suggests that longitudinal studies can help refine models by identifying scenarios where performance deviates from expectations, allowing for iterative improvements.",
+      "evidence_quote": "Additionally, these studies can help refine the models by identifying scenarios where performance deviates from expectations, allowing for iterative improvements.",
+      "page_number": 12
+    }
+  ]
+}

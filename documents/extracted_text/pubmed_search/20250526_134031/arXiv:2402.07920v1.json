@@ -1,0 +1,237 @@
+{
+  "paper_id": {
+    "doi": null,
+    "arxiv_id": "2402.07920v1",
+    "pmcid": null,
+    "pmid": null
+  },
+  "paper_title": "uploads/exploring_patient_trust_in_clinical_advice_from_ai-driven_llms_like___chatgpt_for_self-diagnosis.pdf",
+  "paper_gc_uri": "gs://patient-engagement-pipeline-bucket/uploads/exploring_patient_trust_in_clinical_advice_from_ai-driven_llms_like___chatgpt_for_self-diagnosis.pdf",
+  "source_url": "http://arxiv.org/pdf/2402.07920v1",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Exploring patient trust in clinical advice from Al-driven LLMs like ChatGPT for self-diagnosis",
+      "evidence_quote": "Exploring patient trust in clinical advice from Al-driven LLMs like ChatGPT for self-diagnosis",
+      "page_number": 1
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Delong Du, Richard Paluch, Gunnar Stevens, Claudia M\u00fcller",
+      "evidence_quote": "Delong Du\u00b9, Richard Paluch\u00b9, Gunnar Stevens\u00b9, Claudia M\u00fcller\u00b9",
+      "page_number": 1
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "peer-reviewed",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "February 15/16, 2024",
+      "evidence_quote": "February 15/16, 2024",
+      "page_number": 1
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Artificial Intelligence in Healthcare",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "Germany",
+      "evidence_quote": "1 University of Siegen, Germany",
+      "page_number": 1
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Original Research",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To examine patient trust in clinical advice from AI-driven LLMs like ChatGPT for self-diagnosis.",
+      "evidence_quote": "Thus, can we trust the clinical advice from AI-driven LLMs like ChatGPT like ChatGPT4 for self-diagnosis?",
+      "page_number": 1
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "Patients tend to trust doctors more than AI agents due to competency-evaluation, where trust is equated with efficacy in achieving patient health goals.",
+      "evidence_quote": "Based on our interview study, shown in Appendix Table 2, we've concluded that the confounding factors influencing a patient's trust revolve around their competency-evaluation. Essentially, trust is equated with efficacy, which is determined by whether decisions made based on the AI agent's clinical advice and suggestion will effectively achieve patient's health goals. Patients tend to trust doctors more than Al agents due to this strategy, believing that educated, authorized doctors can provide effective medical guidance.",
+      "page_number": 1
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "Yes",
+      "evidence_quote": "After that, we conducted a semi-structured interview with the patient to understand their trust in AI-driven LLMs for clinical advice.",
+      "page_number": 1
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "Consultation \u2013 Semi-structured interview with a patient.",
+      "evidence_quote": "After that, we conducted a semi-structured interview with the patient to understand their trust in AI-driven LLMs for clinical advice.",
+      "page_number": 1
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "Design: None, Development: None, Evaluation: Consultation, Implementation: None",
+      "evidence_quote": "After that, we conducted a semi-structured interview with the patient to understand their trust in AI-driven LLMs for clinical advice.",
+      "page_number": 1
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "Insights into factors influencing patient trust in AI-driven LLMs.",
+      "evidence_quote": "Based on our interview study, shown in Appendix Table 2, we've concluded that the confounding factors influencing a patient's trust revolve around their competency-evaluation.",
+      "page_number": 1
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "Yes",
+      "evidence_quote": "After that, we conducted a semi-structured interview with the patient to understand their trust in AI-driven LLMs for clinical advice.",
+      "page_number": 1
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "Yes",
+      "evidence_quote": "The exploration of GPT4 in healthcare raises questions regarding autonomy and safety (Matsuzaki & Lindemann, 2016; Paluch et al., 2023) in AI-driven LLMs like ChatGPT for clinical advice.",
+      "page_number": 2
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "Yes",
+      "evidence_quote": "We examined this issue through a think-aloud observation (Van Someren, 1994): a patient uses GPT4 for self-diagnosis and clinical advice, while a doctor assesses ChatGPT's responses with their own expertise.",
+      "page_number": 1
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    }
+  ]
+}

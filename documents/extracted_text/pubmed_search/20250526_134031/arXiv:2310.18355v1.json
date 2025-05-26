@@ -1,0 +1,237 @@
+{
+  "paper_id": {
+    "doi": null,
+    "arxiv_id": "2310.18355v1",
+    "pmcid": null,
+    "pmid": null
+  },
+  "paper_title": "uploads/health_disparities_through_generative_ai_models:_a_comparison_study___using_a_domain_specific_large_.pdf",
+  "paper_gc_uri": "gs://patient-engagement-pipeline-bucket/uploads/health_disparities_through_generative_ai_models:_a_comparison_study___using_a_domain_specific_large_.pdf",
+  "source_url": "http://arxiv.org/pdf/2310.18355v1",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "HEALTH DISPARITIES THROUGH GENERATIVE AI MODELS: A COMPARISON STUDY USING A DOMAIN SPECIFIC LARGE LANGUAGE MODEL",
+      "evidence_quote": "\"This study, titled 'HEALTH DISPARITIES THROUGH GENERATIVE AI MODELS: A COMPARISON STUDY USING A DOMAIN SPECIFIC LARGE LANGUAGE MODEL'...\"",
+      "page_number": 1
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Yohn Jairo Parra Bautista, Vinicious Lima, Carlos Theran, Richard Al\u00f3",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Preprint",
+      "evidence_quote": "\"A PREPRINT OCTOBER 31, 2023\"",
+      "page_number": 2
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "October 31, 2023",
+      "evidence_quote": "\"October 31, 2023\"",
+      "page_number": 1
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Computing, Artificial Intelligence, Healthcare",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "United States",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Original Research",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To investigate the application of domain-specific large language models such as SciBERT in healthcare research to address health disparities through generative AI models.",
+      "evidence_quote": "\"The primary objective of this comparative study is to investigate the application of domain-specific large language models such as SciBERT in healthcare research to address health disparities through generative AI models [10].\"",
+      "page_number": 2
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "The study highlights the potential of LLMs, specifically BERT and SciBERT, to improve physician productivity in the exam room, but also demonstrates the need for careful attention to the ethical and equitable development and implementation of these technologies.",
+      "evidence_quote": "\"This study highlights the potential of LLMs, specifically, BERT and SciBERT, to improve physician productivity in the exam room. However, it also demonstrates the need for careful attention to the ethical and equitable development and implementation of these\"",
+      "page_number": 4
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "None",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "None",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "The study discusses the implementation of LLMs in healthcare workflows to increase productivity and improve the quality of care.",
+      "evidence_quote": "\"Integrating Large Language Models (LLMs) into healthcare workflows can significantly increase the productivity of physicians and other healthcare workers, from back-office staff to schedulers.\"",
+      "page_number": 8
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "The study suggests that LLMs have the potential to improve health communication and increase productivity in the exam room.",
+      "evidence_quote": "\"By enabling natural language processing and generation, LLMs have the potential to improve health communication and increase productivity in the exam room.\"",
+      "page_number": 4
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "Yes, the study focuses on addressing health disparities affecting underserved populations.",
+      "evidence_quote": "\"Health disparities are a critical issue affecting the well-being of various groups, including low-income populations, rural communities, and racial and ethnic minorities.\"",
+      "page_number": 4
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "Yes, the study addresses privacy and bias concerns related to the use of LLMs in healthcare.",
+      "evidence_quote": "\"However, its use in healthcare also presents challenges, such as ensuring data diversity and addressing privacy and bias concerns.\"",
+      "page_number": 4
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    }
+  ]
+}

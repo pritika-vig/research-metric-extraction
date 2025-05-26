@@ -1,0 +1,237 @@
+{
+  "paper_id": {
+    "doi": null,
+    "arxiv_id": "2311.07191v1",
+    "pmcid": null,
+    "pmid": null
+  },
+  "paper_title": "uploads/applying_large_language_models_for_causal_structure_learning_in_non___small_cell_lung_cancer.pdf",
+  "paper_gc_uri": "gs://patient-engagement-pipeline-bucket/uploads/applying_large_language_models_for_causal_structure_learning_in_non___small_cell_lung_cancer.pdf",
+  "source_url": "http://arxiv.org/pdf/2311.07191v1",
+  "fields": [
+    {
+      "name": "Title",
+      "description": "Full title of the study as stated in the paper",
+      "value": "Applying Large Language Models for Causal Structure Learning in Non Small Cell Lung Cancer",
+      "evidence_quote": "\"Applying Large Language Models for Causal Structure Learning in Non Small Cell Lung Cancer\"",
+      "page_number": 1
+    },
+    {
+      "name": "Author(s)",
+      "description": "List of all authors involved in the paper, in order of appearance",
+      "value": "Narmada Naik, Ayush Khandelwal, Mohit Joshi, Madhusudan Atre, Hollis Wright, Kavya Kannan, Scott Hill, Giridhar Mamidipudi, Ganapati Srinivasa, Carlo Bifulco, Brian Piening, Kevin Matlock",
+      "evidence_quote": "\"Narmada Naik\u00b9, Ayush Khandelwal\u00b9, Mohit Joshi\u00b9, Madhusudan Atre\u00b9, Hollis Wright\u00b9, Kavya Kannan\u00b9, Scott Hill\u00b9, Giridhar Mamidipudi\u00b9, Ganapati Srinivasa\u00b9, Carlo Bifulco\u00b2, Brian Piening2, Kevin Matlock\u00b9\"",
+      "page_number": 1
+    },
+    {
+      "name": "Patient Co-authors",
+      "description": "Were any co-authors identified as patients or caregivers?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Journal",
+      "description": "Name of the journal where the study was published",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Publication Stage",
+      "description": "Indicate if the paper is peer-reviewed, a preprint, or another stage",
+      "value": "Preprint",
+      "evidence_quote": "\"arXiv:2311.07191v1 [cs.AI] 13 Nov 2023\"",
+      "page_number": 1
+    },
+    {
+      "name": "Publication Date",
+      "description": "Official date the paper was published",
+      "value": "November 13, 2023",
+      "evidence_quote": "\"arXiv:2311.07191v1 [cs.AI] 13 Nov 2023\"",
+      "page_number": 1
+    },
+    {
+      "name": "Field of Study",
+      "description": "Disciplinary or clinical field, such as primary care, oncology, or public health",
+      "value": "Medical AI, Oncology",
+      "evidence_quote": "\"In this article, we focus on incorporating the feedback of LLM for CSL in the medical domain, specifically the field of oncology\"",
+      "page_number": 1
+    },
+    {
+      "name": "Country",
+      "description": "Country or countries where the study was conducted or primarily situated",
+      "value": "USA",
+      "evidence_quote": "\"\u00b9d\u0101tma Health Science, Beaverton, OR, USA, \u00b2Earle A. Chiles Research Institute, Providence Cancer Institute, Portland, OR, USA\"",
+      "page_number": 1
+    },
+    {
+      "name": "Type of Article",
+      "description": "Classify the article: original research, protocol, review, commentary, etc.",
+      "value": "Original Research",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Aim of Study",
+      "description": "State the main purpose or objective of the study as described by the authors",
+      "value": "To investigate applying Large Language Models (LLMs) to determine the directionality of edges in causal discovery for Non Small Cell Lung Cancer (NSCLC) patients.",
+      "evidence_quote": "\"In this paper we investigate applying LLMs to the problem of determining the directionality of edges in causal discovery. Specifically, we test our approach on a deidentified set of Non Small Cell Lung Cancer (NSCLC) patients that have both electronic health record and genomic panel data.\"",
+      "page_number": 1
+    },
+    {
+      "name": "Key Findings",
+      "description": "Summarize the main results or conclusions of the study",
+      "value": "LLMs can accurately predict the directionality of edges in causal graphs, outperforming existing state-of-the-art methods.",
+      "evidence_quote": "\"Our result shows that LLMs can accurately predict the directionality of edges in causal graphs, outperforming existing state-of-the-art methods.\"",
+      "page_number": 1
+    },
+    {
+      "name": "Patient/Public Engagement (Y/N)",
+      "description": "Does the study report any meaningful or intentional involvement of patients or the public in any phase of the research or implementation?",
+      "value": "Yes",
+      "evidence_quote": "\"Afterwards, we started updating the model using human intervention. We first corrected the lack of Age influencing smoking status of a patient with the following prompt, \"how age is not cause smoking please relook into the adjacency matrix and generate a correct one.\" Then we add in that staging and smoking should be effecting the mutation status, \u201cthe stage group and smoking should cause some mutation in nsclc.\" This represents the V3 LLM DAG.\"",
+      "page_number": 3
+    },
+    {
+      "name": "Type of Engagement (Montreal Model continuum)",
+      "description": "Categorize engagement based on the Montreal Model: Information (e.g., newsletters), Consultation (e.g., surveys, focus groups), Collaboration (e.g., co-design sessions), or Partnership (e.g., decision-making roles, advisory boards).",
+      "value": "Consultation - Human intervention to correct and update the model.",
+      "evidence_quote": "\"Afterwards, we started updating the model using human intervention. We first corrected the lack of Age influencing smoking status of a patient with the following prompt, \"how age is not cause smoking please relook into the adjacency matrix and generate a correct one.\" Then we add in that staging and smoking should be effecting the mutation status, \u201cthe stage group and smoking should cause some mutation in nsclc.\" This represents the V3 LLM DAG.\"",
+      "page_number": 3
+    },
+    {
+      "name": "Level of Patient Involvement (Montreal Model)",
+      "description": "At what level were patients or the public involved across the research lifecycle? Score each phase (design, development, evaluation, implementation) as: None, Information, Consultation, Collaboration, or Partnership.",
+      "value": "Design: None, Development: Consultation, Evaluation: None, Implementation: None",
+      "evidence_quote": "\"Afterwards, we started updating the model using human intervention. We first corrected the lack of Age influencing smoking status of a patient with the following prompt, \"how age is not cause smoking please relook into the adjacency matrix and generate a correct one.\" Then we add in that staging and smoking should be effecting the mutation status, \u201cthe stage group and smoking should cause some mutation in nsclc.\" This represents the V3 LLM DAG.\"",
+      "page_number": 3
+    },
+    {
+      "name": "Evaluation of Impact (Y/N)",
+      "description": "Did the study evaluate or measure the effect of patient/public engagement?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Type of Evaluation",
+      "description": "What type of method or framework was used to evaluate the impact of engagement (e.g., metrics, qualitative feedback, evaluation framework)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Impact of Engagement",
+      "description": "Describe any outcomes or changes attributed to patient/public engagement (e.g., design changes, improved recruitment, insights).",
+      "value": "Improved model accuracy",
+      "evidence_quote": "\"Afterwards, we started updating the model using human intervention. We first corrected the lack of Age influencing smoking status of a patient with the following prompt, \"how age is not cause smoking please relook into the adjacency matrix and generate a correct one.\" Then we add in that staging and smoking should be effecting the mutation status, \u201cthe stage group and smoking should cause some mutation in nsclc.\" This represents the V3 LLM DAG.\"",
+      "page_number": 3
+    },
+    {
+      "name": "Participatory Process",
+      "description": "Did the study include a participatory design process such as workshops, co-design, or stakeholder sessions?",
+      "value": "Yes - Human intervention to correct and update the model.",
+      "evidence_quote": "\"Afterwards, we started updating the model using human intervention. We first corrected the lack of Age influencing smoking status of a patient with the following prompt, \"how age is not cause smoking please relook into the adjacency matrix and generate a correct one.\" Then we add in that staging and smoking should be effecting the mutation status, \u201cthe stage group and smoking should cause some mutation in nsclc.\" This represents the V3 LLM DAG.\"",
+      "page_number": 3
+    },
+    {
+      "name": "Continuous Evaluation Cycles",
+      "description": "Was engagement conducted iteratively or cyclically, with feedback loops or repeated interaction?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Implementation",
+      "description": "Did patient/public engagement influence the implementation strategy or process of the research?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Organization of Health Care",
+      "description": "Did engagement lead to reported changes in health care delivery, systems design, or institutional practice?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Persuasive Design Techniques",
+      "description": "Were behavior-change strategies or persuasive technologies mentioned (e.g., nudges, gamification, reminders)?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Assess Impact",
+      "description": "Did the study measure outcomes or success metrics related specifically to engagement efforts?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Information",
+      "description": "Was information provided to patients/public about the study, without involving them in decision-making?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Consultation",
+      "description": "Was patient or public input sought (e.g., through interviews, surveys, focus groups), without involving them in decision-making?",
+      "value": "Yes - Human intervention to correct and update the model.",
+      "evidence_quote": "\"Afterwards, we started updating the model using human intervention. We first corrected the lack of Age influencing smoking status of a patient with the following prompt, \"how age is not cause smoking please relook into the adjacency matrix and generate a correct one.\" Then we add in that staging and smoking should be effecting the mutation status, \u201cthe stage group and smoking should cause some mutation in nsclc.\" This represents the V3 LLM DAG.\"",
+      "page_number": 3
+    },
+    {
+      "name": "Collaboration",
+      "description": "Was there shared decision-making or co-design between researchers and participants in any phase of the study?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Partnership",
+      "description": "Were patients/public involved across all stages with formal roles (e.g., co-authors, advisory board, project governance)?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Equity or Inclusivity Considerations",
+      "description": "Did the study aim to include marginalized or underrepresented groups in the engagement process?",
+      "value": "No",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Ethical, Legal, and Social Implications (ELSI)",
+      "description": "Did the study address privacy, informed consent, data ethics, or cultural relevance in its engagement or implementation approach?",
+      "value": "Yes - Study was conducted under a protocol approved by the Providence IRB.",
+      "evidence_quote": "\"This study was conducted under a protocol approved by the Providence IRB (Protocol 2018000188).\"",
+      "page_number": 3
+    },
+    {
+      "name": "Technology Complexity / Integration Readiness",
+      "description": "Did the study evaluate how complex the technology was or how well it integrated with existing clinical or community workflows?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Real-World Evaluation or Deployment",
+      "description": "Was the technology evaluated or deployed in real-world settings beyond pilot studies or lab prototypes?",
+      "value": "N/A",
+      "evidence_quote": "N/A",
+      "page_number": null
+    },
+    {
+      "name": "Feedback and Iterative Adaptation",
+      "description": "Was feedback from participants used in an ongoing way to adapt the design, strategy, or evaluation?",
+      "value": "Yes - Model was updated using human intervention.",
+      "evidence_quote": "\"Afterwards, we started updating the model using human intervention. We first corrected the lack of Age influencing smoking status of a patient with the following prompt, \"how age is not cause smoking please relook into the adjacency matrix and generate a correct one.\" Then we add in that staging and smoking should be effecting the mutation status, \u201cthe stage group and smoking should cause some mutation in nsclc.\" This represents the V3 LLM DAG.\"",
+      "page_number": 3
+    }
+  ]
+}
